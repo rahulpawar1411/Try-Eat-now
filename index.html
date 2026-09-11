@@ -1,0 +1,1956 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en" style="">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet">
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        overscroll-behavior: none;
+      }
+
+      main>:first-child {
+        margin-top: 0 !important;
+      }
+
+      main>:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+    id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary": "#55615c", "on-primary-fixed-variant": "#005227", "primary-container": "#008644", "surface-container-highest": "#dce2f7", "secondary-container": "#d6e3dc", "on-surface-variant": "#3e4a3f", "surface-tint": "#006d36", "inverse-on-surface": "#edf0ff", "on-secondary-container": "#596560", "surface-container-high": "#e1e8fd", "on-tertiary": "#ffffff", "on-secondary-fixed": "#131e1a", "surface-container": "#e9edff", "on-secondary-fixed-variant": "#3d4944", "surface-container-lowest": "#ffffff", "background": "#f9f9ff", "primary": "#006a34", "on-tertiary-fixed": "#2a1700", "on-background": "#141b2b", "tertiary-fixed": "#ffddb8", "primary-fixed": "#84faa5", "on-error": "#ffffff", "on-surface": "#141b2b", "on-error-container": "#93000a", "on-tertiary-container": "#fffbff", "on-primary": "#ffffff", "on-primary-fixed": "#00210c", "secondary-fixed": "#d9e5df", "surface": "#f9f9ff", "surface-bright": "#f9f9ff", "inverse-primary": "#67dd8b", "outline-variant": "#bdcabc", "surface-container-low": "#f1f3ff", "surface-variant": "#dce2f7", "surface-dim": "#d3daef", "on-secondary": "#ffffff", "outline": "#6e7a6e", "error-container": "#ffdad6", "tertiary-container": "#a36700", "inverse-surface": "#293040", "error": "#ba1a1a", "on-tertiary-fixed-variant": "#653e00", "tertiary": "#825100", "primary-fixed-dim": "#67dd8b", "secondary-fixed-dim": "#bdc9c3", "on-primary-container": "#f6fff3", "tertiary-fixed-dim": "#ffb95f" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "space-3xl": "4rem", "space-xl": "2rem", "space-2xl": "3rem", "gutter-desktop": "1.5rem", "space-xs": "0.5rem", "space-sm": "0.75rem", "margin-mobile": "1.25rem", "space-2xs": "0.25rem", "space-lg": "1.5rem", "margin-desktop": "3rem", "gutter-mobile": "1rem" }, "fontFamily": { "body-sm": ["Inter"], "headline-sm": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "body-md": ["Inter"], "label-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "display-lg-mobile": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"] }, "fontSize": { "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "title-md": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-xl-mobile": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "display-lg-mobile": ["38px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "700" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }] } } } }</script>
+</head>
+
+<body class="bg-surface font-body-md text-body-md text-on-surface antialiased min-h-screen flex flex-col"
+  style="zoom: 0.9;">
+  <header
+    class="fixed top-0 left-0 right-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-md shadow-sm transition-all">
+    <div class="max-w-[1360px] mx-auto px-6 lg:px-12 py-3.5 flex items-center justify-between gap-6">
+      <div class="flex items-center gap-3 shrink-0"><a class="flex items-center gap-3 group" data-path="home" href="#">
+          <div class="flex items-center justify-center transition-transform group-hover:scale-105"><img
+              alt="Try Eat Now" class="h-16 w-16 md:h-20 md:w-20 object-contain rounded-full"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzfR5TJI9sYfKm3E6c3x_rOSPYA2wT5eIB_kV_WfNljCoT56BOYY7GeSVTKU_UmV1_gb2JrPkTydIy6aOqokC2VGC-4kmjMmT2w8mbFDUTX3VeVD-aJxt90yTWeqWzVDaxMbRZlIqlLUw2aZwvXGhhnNDag0tfU4mD_7lUaK3h4tPHawyNyVB3wdLqc1TUCw8RyrX2tQUe5WwOV0lH2llnA_ODXI1ELO7Y1LMNuk-wqnI5Dj2JWz65EqDYrI-5cRtG9Uc">
+          </div>
+        </a></div>
+      <nav class="hidden xl:flex items-center gap-6" data-active-classes="text-primary font-bold"><a
+          class="text-on-surface hover:text-primary font-semibold text-label-lg transition-colors py-2" data-path="home"
+          href="#top">Home</a>
+        <div class="relative group"><button
+            class="flex items-center gap-1 text-on-surface-variant group-hover:text-primary font-semibold text-label-lg transition-colors py-2 cursor-pointer"
+            type="button"><span class="">Our Verticals</span><span
+              class="material-symbols-outlined text-[18px] transition-transform group-hover:rotate-180">expand_more</span></button>
+          <div class="absolute top-full left-0 pt-2 w-72 hidden group-hover:block transition-all">
+            <div
+              class="p-3 bg-surface-container-lowest rounded-xl shadow-[0_24px_48px_-12px_rgba(17,24,39,0.14),0_8px_20px_-4px_rgba(17,24,39,0.06)] flex flex-col gap-1 border border-outline-variant/30">
+              <a class="p-2.5 rounded-lg hover:bg-surface-container-high transition-colors flex items-center justify-between"
+                data-path="business-verticals" href="#verticals">
+                <div class="flex flex-col"><span
+                    class="font-label-md text-label-md text-on-surface font-semibold">Product Trading</span><span
+                    class="font-body-sm text-body-sm text-on-surface-variant">Bulk Agri &amp; Digital Commerce</span>
+                </div><span
+                  class="px-2 py-0.5 rounded-full bg-[#ECFDF5] text-[#065F46] text-[10px] font-bold shrink-0">LIVE</span>
+              </a><a
+                class="p-2.5 rounded-lg hover:bg-surface-container-high transition-colors flex items-center justify-between"
+                data-path="quick-food" href="#verticals">
+                <div class="flex flex-col"><span class="font-label-md text-label-md text-on-surface font-semibold">Quick
+                    Food &amp; Beverages</span><span class="font-body-sm text-body-sm text-on-surface-variant">Try Eat
+                    Now™ Cloud Brands</span></div><span
+                  class="px-2 py-0.5 rounded-full bg-[#FFFBEB] text-[#92400E] text-[10px] font-bold shrink-0">GOING
+                  LIVE</span>
+              </a><a
+                class="p-2.5 rounded-lg hover:bg-surface-container-high transition-colors flex items-center justify-between"
+                data-path="packaged-fmcg" href="#verticals">
+                <div class="flex flex-col"><span
+                    class="font-label-md text-label-md text-on-surface font-semibold">Packaged Consumer
+                    Foods</span><span class="font-body-sm text-body-sm text-on-surface-variant">Instant Cart &amp;
+                    Snacking CPG</span></div><span
+                  class="px-2 py-0.5 rounded-full bg-[#F1F5F9] text-[#475569] text-[10px] font-bold shrink-0">SOON</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="relative group"><button
+            class="flex items-center gap-1 text-on-surface-variant group-hover:text-primary font-semibold text-label-lg transition-colors py-2 cursor-pointer"
+            type="button"><span class="">Operating Ecosystem</span><span
+              class="material-symbols-outlined text-[18px] transition-transform group-hover:rotate-180">expand_more</span></button>
+          <div class="absolute top-full left-0 pt-2 w-72 hidden group-hover:block transition-all">
+            <div
+              class="p-3 bg-surface-container-lowest rounded-xl shadow-[0_24px_48px_-12px_rgba(17,24,39,0.14),0_8px_20px_-4px_rgba(17,24,39,0.06)] flex flex-col gap-1 border border-outline-variant/30">
+              <a class="p-2.5 rounded-lg hover:bg-surface-container-high transition-colors flex items-center gap-3"
+                data-path="operating-engine" href="#verticals">
+                <div
+                  class="w-8 h-8 rounded-lg bg-secondary-container flex items-center justify-center text-primary shrink-0">
+                  <span class="material-symbols-outlined text-[18px]">cycle</span>
+                </div>
+                <div class="flex flex-col"><span
+                    class="font-label-md text-label-md text-on-surface font-semibold">Operating Engine</span><span
+                    class="font-body-sm text-body-sm text-on-surface-variant">6-Stage Product Lifecycle</span></div>
+              </a><a class="p-2.5 rounded-lg hover:bg-surface-container-high transition-colors flex items-center gap-3"
+                data-path="omnichannel" href="#verticals">
+                <div
+                  class="w-8 h-8 rounded-lg bg-secondary-container flex items-center justify-center text-primary shrink-0">
+                  <span class="material-symbols-outlined text-[18px]">alt_route</span>
+                </div>
+                <div class="flex flex-col"><span
+                    class="font-label-md text-label-md text-on-surface font-semibold">Omnichannel
+                    Distribution</span><span class="font-body-sm text-body-sm text-on-surface-variant">Q-Commerce,
+                    Aggregators &amp; D2C</span></div>
+              </a><a class="p-2.5 rounded-lg hover:bg-surface-container-high transition-colors flex items-center gap-3"
+                data-path="propelpad" href="#partner-form">
+                <div
+                  class="w-8 h-8 rounded-lg bg-secondary-container flex items-center justify-center text-primary shrink-0">
+                  <span class="material-symbols-outlined text-[18px]">lan</span>
+                </div>
+                <div class="flex flex-col"><span
+                    class="font-label-md text-label-md text-on-surface font-semibold">PropelPad
+                    Infrastructure</span><span class="font-body-sm text-body-sm text-on-surface-variant">Distributed
+                    Commerce Backbone</span></div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="relative group"><button
+            class="flex items-center gap-1 text-on-surface-variant group-hover:text-primary font-semibold text-label-lg transition-colors py-2 cursor-pointer"
+            type="button"><span class="">Company</span><span
+              class="material-symbols-outlined text-[18px] transition-transform group-hover:rotate-180">expand_more</span></button>
+          <div class="absolute top-full left-0 pt-2 w-64 hidden group-hover:block transition-all">
+            <div
+              class="p-3 bg-surface-container-lowest rounded-xl shadow-[0_24px_48px_-12px_rgba(17,24,39,0.14),0_8px_20px_-4px_rgba(17,24,39,0.06)] flex flex-col gap-1 border border-outline-variant/30">
+              <a class="p-2.5 rounded-lg hover:bg-surface-container-high transition-colors flex items-center gap-2.5"
+                data-path="about-us" href="#top"><span
+                  class="material-symbols-outlined text-[18px] text-primary">corporate_fare</span><span
+                  class="font-label-md text-label-md text-on-surface font-semibold">About TEN Foods</span></a><a
+                class="p-2.5 rounded-lg hover:bg-surface-container-high transition-colors flex items-center gap-2.5"
+                data-path="why-ten" href="#partner-form"><span
+                  class="material-symbols-outlined text-[18px] text-primary">verified</span><span
+                  class="font-label-md text-label-md text-on-surface font-semibold">Why TEN Foods</span></a><a
+                class="p-2.5 rounded-lg hover:bg-surface-container-high transition-colors flex items-center gap-2.5"
+                data-path="leadership" href="#partner-form"><span
+                  class="material-symbols-outlined text-[18px] text-primary">groups</span><span
+                  class="font-label-md text-label-md text-on-surface font-semibold">Leadership &amp;
+                  Governance</span></a>
+            </div>
+          </div>
+        </div><a class="text-on-surface-variant hover:text-primary font-semibold text-label-lg transition-colors py-2"
+          data-path="partner-with-us" href="#partner-form">Partners</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <div class="hidden 2xl:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container"><span
+            class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mr-1">Channels:</span><span
+            class="px-2 py-0.5 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-[0_1px_2px_rgba(0,0,0,0.04)]">Blinkit</span><span
+            class="px-2 py-0.5 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-[0_1px_2px_rgba(0,0,0,0.04)]">Zepto</span><span
+            class="px-2 py-0.5 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-[0_1px_2px_rgba(0,0,0,0.04)]">Swiggy</span><span
+            class="px-2 py-0.5 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-[0_1px_2px_rgba(0,0,0,0.04)]">Zomato</span>
+        </div><button
+          class="xl:hidden flex items-center justify-center w-10 h-10 rounded-full bg-surface-container-low text-on-surface"
+          onclick="const m = document.getElementById('mobile-menu'); if(m){ m.classList.toggle('hidden'); }"
+          type="button"><span class="material-symbols-outlined text-[24px]">menu</span></button><a
+          class="hidden md:inline-flex items-center justify-center min-h-[44px] gap-2 px-5 py-2.5 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg font-semibold shadow-sm hover:shadow-md transition-all duration-150 active:scale-95 cursor-pointer select-none"
+          href="#partner-form"><span class="material-symbols-outlined text-[18px]">handshake</span><span
+            class="">Partner With Us</span></a>
+      </div>
+    </div>
+    <div
+      class="xl:hidden w-full bg-surface-container-lowest border-t border-outline-variant/30 px-6 py-5 flex flex-col gap-4 shadow-md hidden"
+      id="mobile-menu">
+      <div class="flex flex-col gap-3 font-semibold text-label-lg"><a
+          class="text-on-surface hover:text-primary transition-colors py-1.5" href="#top">Home</a><a
+          class="text-on-surface hover:text-primary transition-colors py-1.5" href="#verticals">Our Verticals</a><a
+          class="text-on-surface hover:text-primary transition-colors py-1.5" href="#verticals">Operating
+          Ecosystem</a><a class="text-on-surface hover:text-primary transition-colors py-1.5"
+          href="#partner-form">Company</a><a class="text-on-surface hover:text-primary transition-colors py-1.5"
+          href="#partner-form">Partners</a></div>
+      <div class="pt-2 border-t border-outline-variant/30"><a
+          class="w-full flex items-center justify-center min-h-[44px] gap-2 px-5 py-3 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg font-semibold shadow-sm transition-all duration-150 active:scale-95 cursor-pointer select-none"
+          href="#partner-form"><span class="material-symbols-outlined text-[18px]">handshake</span><span
+            class="">Partner With Us</span></a></div>
+    </div>
+  </header>
+  <main class="w-full bg-surface flex-grow pt-24" id="top">
+    <div class="flex flex-col w-full">
+      <!-- SECTION 1: HERO SECTION -->
+      <section
+        class="relative w-full overflow-hidden bg-gradient-to-b from-surface-container-lowest via-surface to-surface-container-low/40 py-12 lg:py-20">
+        <div class="max-w-[1360px] mx-auto px-6 lg:px-12 flex flex-col gap-12 lg:gap-16">
+          <!-- Top Announcement & Positioning -->
+          <div class="flex flex-col items-center text-center max-w-4xl mx-auto gap-6">
+            <div
+              class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-fixed shadow-sm">
+              <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+              <span class="font-label-sm text-label-sm tracking-wider uppercase font-bold">SOURCE • BUILD • BRAND • SELL
+                • SCALE</span>
+            </div>
+            <h1
+              class="font-headline-xl text-headline-xl lg:text-display-lg font-extrabold tracking-tight text-on-surface leading-tight">
+              Building Food Brands for the <span
+                class="text-primary underline decoration-primary/20 decoration-wavy">New Age</span> of Commerce
+            </h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+              TEN Foods sources, develops, and distributes high-velocity food products across India's fastest-growing
+              digital ecosystems — from 15-minute Quick Commerce dark stores to top food delivery platforms.
+            </p>
+            <!-- Secondary Affirmation Pill -->
+            <div
+              class="inline-flex flex-wrap items-center justify-center gap-2 px-4 py-2 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md shadow-inner">
+              <span class="material-symbols-outlined text-[18px] text-primary">agriculture</span>
+              <span class="">From Farm &amp; Factory to Digital Shelf</span>
+              <span class="text-outline-variant font-bold">•</span>
+              <span class="text-primary font-semibold">Trading products today. Architecting food brands for
+                tomorrow.</span>
+            </div>
+            <!-- CTAs -->
+            <div class="flex flex-wrap items-center justify-center gap-4 pt-2"><a
+                class="inline-flex items-center justify-center min-h-[44px] gap-2 px-8 py-3.5 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg transition-all duration-150 shadow-[0_8px_20px_rgba(0,106,52,0.25)] hover:shadow-[0_12px_28px_rgba(0,106,52,0.35)] active:scale-95 cursor-pointer select-none"
+                href="#verticals"><span class="">Explore TEN Foods</span><span
+                  class="material-symbols-outlined text-[20px]">arrow_downward</span></a><a
+                class="inline-flex items-center justify-center min-h-[44px] gap-2 px-7 py-3.5 rounded-full bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-lg text-label-lg shadow-sm hover:shadow-md transition-all duration-150 active:scale-95 cursor-pointer select-none"
+                href="#partner-form"><span
+                  class="material-symbols-outlined text-[20px] text-primary">handshake</span><span class="">Partner With
+                  Us</span></a></div>
+          </div>
+          <!-- 3-Pillar Visual Cards Display (Section 15 Inspiration) -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 pt-4">
+            <!-- Pillar Left: TRADE -->
+            <div
+              class="group relative rounded-2xl overflow-hidden bg-surface-container-lowest shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_16px_36px_rgba(0,106,52,0.12)] transition-all duration-300 flex flex-col justify-between">
+              <div class="relative h-64 w-full overflow-hidden bg-surface-container">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  data-alt="High quality commercial agricultural harvest of golden sun-drenched fresh Maharashtra onions and crisp produce neatly stacked in wooden rustic farm crates with crisp natural light, agricultural trading aesthetic, organic tones, vibrant green freshness."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5MvLidBPTxYkMR9gZvCgmL6nOkwPhTWc0IUTioCvfGx2gd6j9wuAZhY3-WsV5hmPZMHb4-rfcqAT5ggga934m_W0vSqymqGb1MeFP7vaFluCxxQh3hY1kwi1TGYlFifdz61uitl_zRU78byX34JN0TbA2XyUW_leAFrqHG4cjU4obW5RnSAZREEc3inxyk7V6AaTSUz4kVgxpYDiEutZ49HFQDYOaIZWJSvr2wv6dPyYbVhhx633TFA">
+                <div class="absolute top-4 left-4">
+                  <span
+                    class="px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm uppercase font-bold shadow-sm">01
+                    TRADE</span>
+                </div>
+                <div class="absolute top-4 right-4">
+                  <span
+                    class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#ECFDF5] text-[#065F46] font-label-sm text-label-sm font-bold shadow-xs">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#065F46]"></span> LIVE
+                  </span>
+                </div>
+              </div>
+              <div class="p-6 flex flex-col gap-3">
+                <h3 class="font-headline-sm text-headline-sm text-on-surface">Agri Commodities &amp; Sourcing</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">High-volume farm procurement, cold-chain
+                  routing, and B2B staple supplies tailored for quick commerce fulfillment centers.</p>
+                <div class="pt-2 flex items-center justify-between text-on-surface-variant font-label-md text-label-md">
+                  <span class="flex items-center gap-1 text-primary font-semibold"><span
+                      class="material-symbols-outlined text-[18px]">verified</span> Farm-to-Dark Store</span>
+                  <span class="">100+ MT/Day</span>
+                </div>
+              </div>
+            </div>
+            <!-- Pillar Center: SERVE -->
+            <div
+              class="group relative rounded-2xl overflow-hidden bg-surface-container-lowest shadow-[0_8px_28px_rgba(0,106,52,0.14)] hover:shadow-[0_20px_44px_rgba(0,106,52,0.2)] transition-all duration-300 flex flex-col justify-between -translate-y-1 lg:-translate-y-3">
+              <div class="relative h-64 w-full overflow-hidden bg-surface-container">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  data-alt="Close up gourmet artisanal handheld food spread, melting cheese on toasted sourdough sandwich, mini personal oven-baked pizza, foaming authentic masala chai in clay cup, and sparkling chilled artisanal jeera soda bottle in warm amber and green lighting, appetizing delicious commercial food shoot."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuABCOl6iAGBTW_F0Ls2Y5uEe5gvohmwTsS6HgOYATaSYDbhWMUay61oKDM1J2Lmxl39_NI-lHcPECKz1i7zGbxMV051dphFuemo_fEmeAMZwj4EurOX5-hrm2uOiI-bow6ZZYeQZtlNDDrTa_N6pi9sQDdKiSKde0FNRKjDp9Q0zSFRJwSPTYjRt09_Nj7ajlddk9tQ6bXn5OUW_CuX-yN-cx1PAlHQlcNocktDvo1iiv37GLaUlhT0YA">
+                <div class="absolute top-4 left-4">
+                  <span
+                    class="px-3 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm uppercase font-bold shadow-sm">02
+                    SERVE</span>
+                </div>
+                <div class="absolute top-4 right-4">
+                  <span
+                    class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#FFFBEB] text-[#92400E] font-label-sm text-label-sm font-bold shadow-xs">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#92400E]"></span> GOING LIVE
+                  </span>
+                </div>
+                <div
+                  class="absolute bottom-3 left-4 right-4 flex items-center justify-between px-3 py-1.5 rounded-xl bg-surface-container-lowest/90 backdrop-blur-md">
+                  <div class="flex items-center gap-2">
+                    <img alt="Try Eat Now Logo" class="h-6 w-auto object-contain"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUU7z6nDdyma-eSaqw1Ok2wURwW4LmxWXyRMYOpIgeXfmBtzOwaCkG52MMO09KiBY2pwSnL53pQKUL0KpnCEpUby72d0cbekAZM4YywcGKUE1UZXju0ggCDfc0zrkrYepf08iRh8FZUsAeLJXAPi5oSnxu_nX-jgy67HQI37Jc5k2uWZmmJ4ZEY1V36Pt383Nhaxuf0oGi60Erd3f7D4Zq3gnhEs9DhBPrEwc5IVHkshybuIoDOuGSfeH_kmPGkDHFitc">
+                    <span class="font-label-sm text-label-sm font-bold text-on-surface">Try Eat Now™</span>
+                  </div>
+                  <span class="font-label-sm text-label-sm text-primary font-bold">5-Min Prep</span>
+                </div>
+              </div>
+              <div class="p-6 flex flex-col gap-3">
+                <h3 class="font-headline-sm text-headline-sm text-on-surface">Quick Kitchen Brands</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Asset-light, standardized delivery menus
+                  designed specifically for cloud pods with minimal kitchen footprint and maximum taste velocity.</p>
+                <div class="pt-2 flex items-center justify-between text-on-surface-variant font-label-md text-label-md">
+                  <span class="flex items-center gap-1 text-primary font-semibold"><span
+                      class="material-symbols-outlined text-[18px]">bolt</span> Swiggy &amp; Zomato</span>
+                  <span class="">Zero-Fryer Ops</span>
+                </div>
+              </div>
+            </div>
+            <!-- Pillar Right: BUILD BRANDS -->
+            <div
+              class="group relative rounded-2xl overflow-hidden bg-surface-container-lowest shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_16px_36px_rgba(0,106,52,0.12)] transition-all duration-300 flex flex-col justify-between">
+              <div class="relative h-64 w-full overflow-hidden bg-surface-container">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  data-alt="Modern premium packaged FMCG snacks, colorful minimalist matte-finish packaging of spiced artisanal namkeen, puffed healthy roasted seeds, and slim canned functional beverages against crisp studio backdrop with fresh botanical green herbs and spices."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7pv7xRXi--NHJnRxyHpGA0bYLlsOUZvp96Fi3JOSLcGjdblNAlBaSEsLCZXDUiIhy9oXz5PwVs-_AWPQvyVKmf0wVHPJu74XLLgFzkJ7QnDuRA1_nI3gy_vXwMdxZ9hgmIn454sZlO0SbVQAEMXsvWvyyjUqoA97vWIgs-Qrqgy0SMZobnSEWYow0rsyFb2BgpHSjm58tFDv1HzRbVeAoQ6YUyu7cC6wo2fSAFL45UOZU_lyUfecfgw">
+                <div class="absolute top-4 left-4">
+                  <span
+                    class="px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm uppercase font-bold shadow-sm">03
+                    BUILD BRANDS</span>
+                </div>
+                <div class="absolute top-4 right-4">
+                  <span
+                    class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-bold shadow-xs">
+                    COMING SOON
+                  </span>
+                </div>
+              </div>
+              <div class="p-6 flex flex-col gap-3">
+                <h3 class="font-headline-sm text-headline-sm text-on-surface">Digital-First FMCG</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Consumer packaged goods conceived for rapid
+                  impulse-add carts on Blinkit, Zepto, and Instamart with bold aesthetics and addictive flavors.</p>
+                <div class="pt-2 flex items-center justify-between text-on-surface-variant font-label-md text-label-md">
+                  <span class="flex items-center gap-1 text-primary font-semibold"><span
+                      class="material-symbols-outlined text-[18px]">shopping_bag</span> Quick Shelf Ready</span>
+                  <span class="">High Cart Affinity</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Quick Metrics Strip -->
+          <div
+            class="w-full rounded-2xl bg-surface-container-lowest p-6 shadow-sm flex flex-col lg:flex-row items-center justify-between gap-6 py-4">
+            <div class="flex items-center gap-3.5 w-full lg:w-auto">
+              <div
+                class="w-10 h-10 rounded-xl bg-secondary-container flex items-center justify-center text-primary shrink-0">
+                <span class="material-symbols-outlined text-[20px]">timer</span>
+              </div>
+              <div>
+                <div class="font-title-md text-title-md text-on-surface font-bold">15–30 Min</div>
+                <div class="font-label-sm text-[11px] text-on-surface-variant">Hyperlocal Delivery Ready</div>
+              </div>
+            </div>
+            <div class="hidden lg:block w-px h-8 bg-surface-container-highest"></div>
+            <div class="flex items-center gap-3.5 w-full lg:w-auto">
+              <div
+                class="w-10 h-10 rounded-xl bg-secondary-container flex items-center justify-center text-primary shrink-0">
+                <span class="material-symbols-outlined text-[20px]">account_tree</span>
+              </div>
+              <div>
+                <div class="font-title-md text-title-md text-on-surface font-bold">3 Verticals</div>
+                <div class="font-label-sm text-[11px] text-on-surface-variant">From Agri Trading to CPG</div>
+              </div>
+            </div>
+            <div class="hidden lg:block w-px h-8 bg-surface-container-highest"></div>
+            <div class="flex items-center gap-3.5 w-full lg:w-auto">
+              <div
+                class="w-10 h-10 rounded-xl bg-secondary-container flex items-center justify-center text-primary shrink-0">
+                <span class="material-symbols-outlined text-[20px]">storefront</span>
+              </div>
+              <div>
+                <div class="font-title-md text-title-md text-on-surface font-bold">4 Channels</div>
+                <div class="font-label-sm text-[11px] text-on-surface-variant">Q-Comm, Food Apps, B2B &amp; D2C</div>
+              </div>
+            </div>
+            <div class="hidden lg:block w-px h-8 bg-surface-container-highest"></div>
+            <div class="flex items-center gap-3.5 w-full lg:w-auto">
+              <div class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[20px]">rocket_launch</span>
+              </div>
+              <div>
+                <div class="font-title-md text-title-md text-primary font-bold">100%</div>
+                <div class="font-label-sm text-[11px] text-on-surface-variant">Digital-First Distribution</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION 2: THE THREE BUSINESS VERTICALS -->
+      <section class="w-full py-16 lg:py-24 bg-surface" id="verticals">
+        <div class="max-w-[1360px] mx-auto px-6 lg:px-12 flex flex-col gap-12">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div class="flex flex-col gap-3">
+              <span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-widest">Architectural
+                Pillars</span>
+              <h2 class="font-headline-xl text-headline-xl font-extrabold text-on-surface">Our Business Verticals</h2>
+              <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                Operating purposefully across the complete spectrum of modern food commerce.
+              </p>
+            </div>
+            <div class="flex items-center gap-2">
+              <span
+                class="px-3 py-1 rounded-full bg-surface-container font-label-md text-label-md text-on-surface-variant">High
+                Velocity Demand</span>
+              <span
+                class="px-3 py-1 rounded-full bg-secondary-container font-label-md text-label-md text-on-secondary-fixed font-bold">Pan-India
+                Reach</span>
+            </div>
+          </div>
+          <!-- Vertical Cards Stack -->
+          <div class="flex flex-col gap-8">
+            <!-- VERTICAL 1 -->
+            <div
+              class="w-full rounded-2xl bg-surface-container-lowest p-8 lg:p-10 shadow-sm hover:shadow-md hover:-translate-y-1 active:scale-[0.99] transition-all duration-200 cursor-pointer">
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-7 flex flex-col gap-6">
+                  <div class="flex items-center gap-3"><span
+                      class="px-3 py-1 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md font-bold">VERTICAL
+                      01</span><span
+                      class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#ECFDF5] text-[#065F46] font-label-sm text-label-sm font-bold"><span
+                        class="w-2 h-2 rounded-full bg-[#065F46] animate-ping"></span> 🟢 LIVE</span></div>
+                  <h3 class="font-headline-lg text-headline-lg font-bold text-on-surface">Product Trading &amp; Digital
+                    Commerce</h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">TEN Foods sources and
+                    distributes bulk agricultural produce, pantry essentials, and high-velocity commodities directly
+                    into quick commerce fulfillment clusters with synchronized supply-chain scheduling.</p>
+                  <div class="flex flex-wrap items-center gap-2 pt-2"><span
+                      class="px-3 py-1 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md">Farm
+                      Sourcing</span><span
+                      class="material-symbols-outlined text-[16px] text-outline">arrow_forward</span><span
+                      class="px-3 py-1 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md">Quality
+                      Grading</span><span
+                      class="material-symbols-outlined text-[16px] text-outline">arrow_forward</span><span
+                      class="px-3 py-1 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md">Micro
+                      Hub Sorting</span><span
+                      class="material-symbols-outlined text-[16px] text-outline">arrow_forward</span><span
+                      class="px-3 py-1 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-bold">Dark
+                      Store Drop</span></div>
+                  <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
+                    <div class="p-3 rounded-xl bg-surface flex items-center gap-2.5"><span
+                        class="material-symbols-outlined text-primary text-[20px]">eco</span><span
+                        class="font-label-sm text-label-sm font-semibold text-on-surface">Fresh Maharashtra
+                        Onions</span></div>
+                    <div class="p-3 rounded-xl bg-surface flex items-center gap-2.5"><span
+                        class="material-symbols-outlined text-primary text-[20px]">nutrition</span><span
+                        class="font-label-sm text-label-sm font-semibold text-on-surface">Grated Ginger &amp;
+                        Garlic</span></div>
+                    <div class="p-3 rounded-xl bg-surface flex items-center gap-2.5"><span
+                        class="material-symbols-outlined text-primary text-[20px]">inventory_2</span><span
+                        class="font-label-sm text-label-sm font-semibold text-on-surface">Packaged Staples</span></div>
+                    <div class="p-3 rounded-xl bg-surface flex items-center gap-2.5"><span
+                        class="material-symbols-outlined text-primary text-[20px]">ac_unit</span><span
+                        class="font-label-sm text-label-sm font-semibold text-on-surface">Frozen Commodities</span>
+                    </div>
+                    <div class="p-3 rounded-xl bg-surface flex items-center gap-2.5"><span
+                        class="material-symbols-outlined text-primary text-[20px]">local_drink</span><span
+                        class="font-label-sm text-label-sm font-semibold text-on-surface">Wholesale Beverages</span>
+                    </div>
+                    <div class="p-3 rounded-xl bg-surface flex items-center gap-2.5"><span
+                        class="material-symbols-outlined text-primary text-[20px]">local_shipping</span><span
+                        class="font-label-sm text-label-sm font-semibold text-on-surface">Blinkit &amp; Zepto
+                        Active</span></div>
+                  </div>
+                </div>
+                <div
+                  class="lg:col-span-5 h-72 lg:h-96 rounded-xl overflow-hidden bg-surface-container relative shadow-inner">
+                  <img class="w-full h-full object-cover"
+                    data-alt="High tech modern agri-logistics warehouse with neatly stacked fresh organic produce crates, high precision digital scales, logistics workers wearing green uniforms, clean commercial lighting with sharp contrast."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJ_2efbYwDdVzgBDfUfgD6enC5D4Sms8vl07WT-lKZFTnokbGQpoAQoeOcZi_pODuFvT8o_F1ppe_QR3_j9N2ViZI9kPLBCsLoFlTZ8l8nOvKn_9dgA_xOUAaol_EfkMVj2nBDfJ9lo1m-Wa-bmql_u502O5mXA533ww5zH0Knsvi1uy8wEKKK-Q6Qi9xrUASs8LAP-fhxiNH5EHCTx-XS34KFONT3rKKjXwcWnYqQ7wqgPJioJPrT5g">
+                  <div
+                    class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-surface-container-lowest/90 backdrop-blur-md flex items-center justify-between">
+                    <div>
+                      <div class="font-label-sm text-label-sm text-on-surface-variant font-bold uppercase">Volume
+                        Handled</div>
+                      <div class="font-headline-sm text-headline-sm font-bold text-on-surface">Daily High-Frequency
+                        Routing</div>
+                    </div><span class="material-symbols-outlined text-primary text-[28px]">speed</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- VERTICAL 2 -->
+            <div
+              class="w-full rounded-2xl bg-surface-container-lowest p-8 lg:p-10 shadow-sm hover:shadow-md transition-shadow">
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-7 flex flex-col gap-6">
+                  <div class="flex flex-row items-center gap-2.5 flex-nowrap overflow-x-auto">
+                    <span
+                      class="px-2.5 py-0.5 rounded-lg bg-surface-container text-on-surface font-label-sm text-[11px] font-bold shrink-0">VERTICAL
+                      02</span>
+                    <span
+                      class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#FFFBEB] text-[#92400E] font-label-sm text-[10px] font-bold shrink-0">
+                      <span class="w-1.5 h-1.5 rounded-full bg-[#92400E]"></span> GOING LIVE
+                    </span>
+                    <div class="inline-flex items-center gap-1 shrink-0">
+                      <img alt="TryEatNow Logo" class="h-4 w-4 object-contain"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZa-L0ALVHLKuGJxEErznfUvn0R4lfuojU6y0abpA7bt5QoOVMwJhUIuJ4FMtwT_r0ecoSlObWuCWKAoRmsWQWnrYfWkREvKVw5nz0wwcsTQqx9c28-39CWSL-3z69sOR6_y7cJKz1-fxxfMKsmomERDgY0AwrPu9LNxJYKPAuXgy5kt4_Az7E-utJgSHkVk25eNx7p24endOioBqlmAWqDfHujOc3njV3EmL8dIUAchM2N7NJXHPzGSpqOv7F9aGRAmY">
+                      <span class="font-label-sm text-[11px] text-primary font-bold">Try Eat Now™</span>
+                    </div>
+                  </div>
+                  <h3 class="font-headline-lg text-headline-lg font-bold text-on-surface">Quick Food &amp; Beverage
+                    Brands</h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                    Standardized, delivery-optimized food offerings crafted exclusively for India's booming food
+                    delivery platforms (Swiggy, Zomato). Engineered around our core philosophy:
+                  </p>
+                  <!-- Operating Quote -->
+                  <div
+                    class="p-3.5 sm:p-4 md:p-5 rounded-xl bg-secondary-container/40 text-on-surface flex flex-row items-start sm:items-center gap-3">
+                    <span
+                      class="material-symbols-outlined text-primary text-[20px] sm:text-[24px] shrink-0 mt-0.5 sm:mt-0">restaurant_menu</span><span
+                      class="text-[14px] sm:text-[16px] md:text-headline-sm font-bold text-on-surface-variant leading-snug break-words">“Small
+                      Kitchen. Smart Menu. Fast Preparation. Consistent Experience.”</span>
+                  </div>
+                  <!-- Minimal Equipment Stack -->
+                  <div class="flex flex-col gap-2">
+                    <span
+                      class="font-label-sm text-label-sm text-on-surface-variant font-bold uppercase tracking-wider">Zero
+                      Gas Overhead • Modern Equipment:</span>
+                    <div class="flex flex-wrap gap-2">
+                      <span
+                        class="px-3 py-1 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface">Commercial
+                        Convection Oven</span>
+                      <span
+                        class="px-3 py-1 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface">High-Capacity
+                        Air Fryer</span>
+                      <span
+                        class="px-3 py-1 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface">Digital
+                        Contact Griller</span>
+                      <span
+                        class="px-3 py-1 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface">Smart
+                        Microwave</span>
+                      <span
+                        class="px-3 py-1 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface">Fountain
+                        &amp; Tea Dispensers</span>
+                    </div>
+                  </div>
+                  <div class="grid grid-cols-2 gap-3 pt-2">
+                    <div class="p-3 rounded-xl bg-surface flex flex-col">
+                      <span class="font-label-sm text-label-sm text-primary font-bold">Hot Snacks &amp; Melts</span>
+                      <span class="font-body-sm text-body-sm text-on-surface-variant">Pizzas, Sandwiches, Burgers,
+                        Fries</span>
+                    </div>
+                    <div class="p-3 rounded-xl bg-surface flex flex-col">
+                      <span class="font-label-sm text-label-sm text-primary font-bold">Hot &amp; Cold Craft
+                        Drinks</span>
+                      <span class="font-body-sm text-body-sm text-on-surface-variant">Artisanal Chai, Craft Jeera Soda,
+                        Iced Tea</span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="lg:col-span-5 h-72 lg:h-96 rounded-xl overflow-hidden bg-surface-container relative shadow-inner">
+                  <img class="w-full h-full object-cover"
+                    data-alt="Compact, hyper-clean commercial stainless steel kitchen pod with high-end digital air fryers, countertop pizza conveyor, and modern tea infusion counter, warm ambient lighting, chefs in hygienic black and green aprons."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsciYBlK1h8uAgBcEyVYQrc4dmeqtypU2JprwoQCFEfr3fpiFG7g2dd8pUb9SUHRezgY4QOK_5OdkX8wgcHY6-Bwmc3GtNtrl3aUyFZtPYBpXyGNsyhutD3GBa5BwTeuwIbCQkXnN1G-Y5YOv8wTIrIHJX3-PFVUK_rNedHCVOKloMzffY46FqHlLbTFD4-A0Fq_0mjZd2NSWJHtk14FBqt2VLGpSOHSZjhesCQZf29cB6aSs9cKogSQ">
+                  <div class="absolute top-4 right-4">
+                    <span
+                      class="px-3 py-1.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md font-label-sm text-label-sm text-on-surface font-bold">Dispatch
+                      in &lt; 300 Sec</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- VERTICAL 3 -->
+            <div
+              class="w-full rounded-2xl bg-surface-container-lowest p-8 lg:p-10 shadow-sm hover:shadow-md transition-shadow">
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-7 flex flex-col gap-6">
+                  <div class="flex flex-wrap items-center gap-2.5 mb-1"><span
+                      class="px-3 py-1 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm font-bold shrink-0">VERTICAL
+                      03</span><span
+                      class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-bold shrink-0"><span
+                        class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span> COMING SOON</span><span
+                      class="px-3 py-1 rounded-full bg-secondary-container font-label-sm text-label-sm text-on-secondary-fixed font-bold shrink-0">FMCG
+                      Playbook</span></div>
+                  <h3 class="font-headline-lg text-headline-lg font-bold text-on-surface">Packaged Consumer Food Brands
+                  </h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                    Capturing India's rapidly shifting consumer snacking habits. Proprietary snack and beverage brands
+                    formulated for instant search visibility and repetitive add-to-cart on Zepto, Blinkit, Instamart,
+                    and Amazon.
+                  </p>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                    <div class="p-4 rounded-xl bg-surface flex items-start gap-3">
+                      <span class="material-symbols-outlined text-primary text-[22px]">cookie</span>
+                      <div>
+                        <h4 class="font-label-lg text-label-lg font-bold text-on-surface">Artisanal Regional Snacking
+                        </h4>
+                        <p class="font-body-sm text-body-sm text-on-surface-variant">Modernized namkeen, roasted
+                          seasoned makhanas, and heritage chips in eye-catching matte packaging.</p>
+                      </div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-surface flex items-start gap-3">
+                      <span class="material-symbols-outlined text-primary text-[22px]">local_cafe</span>
+                      <div>
+                        <h4 class="font-label-lg text-label-lg font-bold text-on-surface">Ready-To-Drink (RTD)</h4>
+                        <p class="font-body-sm text-body-sm text-on-surface-variant">Indian botanical craft sodas, cold
+                          brews, and spiced buttermilk in portable shelf-stable formats.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="pt-2">
+                    <div
+                      class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container-high text-on-surface font-label-sm text-label-sm">
+                      <span class="material-symbols-outlined text-[18px] text-primary">data_thresholding</span>
+                      <span class="">Data-backed recipe development based on live SKU velocity across top tier-1 metro
+                        clusters.</span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="lg:col-span-5 h-72 lg:h-96 rounded-xl overflow-hidden bg-surface-container relative shadow-inner">
+                  <img class="w-full h-full object-cover"
+                    data-alt="Chic studio showcase of modern snack pouch packaging with bold typography, lively color palettes of mint green, mango orange, and turmeric yellow, scattered natural spices and roasted seeds."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuj3jt6218TlEU5A9h8QC9VqKntCFrgBxsQHZSBXIlzyRWdLpGmyAn5TkCgvUzV6LFzPnh3LBo2UPEOGbFzSmeX1juUqoP-AS2h9S90GWgSwV1z-EOFbYhZt3f3WBKI5pE4Uzal5sF-lDoqKPZKiUd2VNYP_2v1Th1PfrMIe807Hd70FKNXXEEa32h7_KlMKaNR44AbQW7-EnXq961D66syUGVCUpHdGgcNiWAnQSWn50zX8emb3BidQ">
+                  <div
+                    class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-surface-container-lowest/90 backdrop-blur-md">
+                    <div class="font-label-sm text-label-sm text-primary font-bold uppercase">Quick Commerce Native
+                    </div>
+                    <div class="font-body-sm text-body-sm text-on-surface">Built from the ground up for the
+                      sub-30-minute consumer.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION 3: THE 6-STEP OPERATING ENGINE -->
+      <section class="w-full py-16 lg:py-24 bg-surface-container-low">
+        <div class="max-w-[1360px] mx-auto px-6 lg:px-12 flex flex-col gap-14">
+          <div class="text-center max-w-3xl mx-auto flex flex-col gap-3">
+            <span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-widest">End-to-End
+              Execution</span>
+            <h2 class="font-headline-xl text-headline-xl font-extrabold text-on-surface">The TEN Foods Operating Engine
+            </h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant">
+              A seamless 6-stage lifecycle that takes food ideas from raw demand signals to high-velocity shelf
+              leadership.
+            </p>
+          </div>
+          <!-- 6 Steps Grid -->
+          <div class="flex flex-col gap-6">
+            <div class="relative group/carousel">
+              <div class="flex overflow-x-auto snap-x snap-mandatory gap-5 pb-6 px-1 md:px-2 scroll-smooth select-none"
+                id="operating-engine-slider" style="scrollbar-width: none; -ms-overflow-style: none;">
+                <div
+                  class="engine-card snap-center shrink-0 w-[280px] sm:w-[320px] md:w-[340px] p-6 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm hover:shadow-md transition-all flex flex-col gap-4 relative overflow-hidden group"
+                  data-index="0">
+                  <div class="flex items-center justify-between"><span
+                      class="font-display-lg text-headline-xl text-primary font-black opacity-20 group-hover:opacity-40 transition-opacity">01</span>
+                    <div
+                      class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-primary">
+                      <span class="material-symbols-outlined text-[20px]">troubleshoot</span>
+                    </div>
+                  </div>
+                  <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">DISCOVER</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Identify micro-trends,
+                    unmet consumer search volume on food aggregators, and high-frequency stockout categories across
+                    digital pincodes.</p>
+                </div>
+                <div
+                  class="engine-card snap-center shrink-0 w-[280px] sm:w-[320px] md:w-[340px] p-6 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm hover:shadow-md transition-all flex flex-col gap-4 relative overflow-hidden group"
+                  data-index="1">
+                  <div class="flex items-center justify-between"><span
+                      class="font-display-lg text-headline-xl text-primary font-black opacity-20 group-hover:opacity-40 transition-opacity">02</span>
+                    <div
+                      class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-primary">
+                      <span class="material-symbols-outlined text-[20px]">science</span>
+                    </div>
+                  </div>
+                  <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">SOURCE / DEVELOP</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Direct farmer/aggregator
+                    contracts for farm commodities or culinary lab formulation for 5-minute zero-flame kitchen menus.
+                  </p>
+                </div>
+                <div
+                  class="engine-card snap-center shrink-0 w-[280px] sm:w-[320px] md:w-[340px] p-6 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm hover:shadow-md transition-all flex flex-col gap-4 relative overflow-hidden group"
+                  data-index="2">
+                  <div class="flex items-center justify-between"><span
+                      class="font-display-lg text-headline-xl text-primary font-black opacity-20 group-hover:opacity-40 transition-opacity">03</span>
+                    <div
+                      class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-primary">
+                      <span class="material-symbols-outlined text-[20px]">palette</span>
+                    </div>
+                  </div>
+                  <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">BRAND</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Architecting the "Try Eat
+                    Now" consumer seal and high-contrast digital-shelf packaging designed to stop thumb-scrolls
+                    instantly.</p>
+                </div>
+                <div
+                  class="engine-card snap-center shrink-0 w-[280px] sm:w-[320px] md:w-[340px] p-6 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm hover:shadow-md transition-all flex flex-col gap-4 relative overflow-hidden group"
+                  data-index="3">
+                  <div class="flex items-center justify-between"><span
+                      class="font-display-lg text-headline-xl text-primary font-black opacity-20 group-hover:opacity-40 transition-opacity">04</span>
+                    <div
+                      class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-primary">
+                      <span class="material-symbols-outlined text-[20px]">add_business</span>
+                    </div>
+                  </div>
+                  <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">LIST</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Rapid catalog rollout
+                    across Blinkit, Zepto, Swiggy Instamart, Swiggy Food, and Zomato with algorithm-optimized taxonomy.
+                  </p>
+                </div>
+                <div
+                  class="engine-card snap-center shrink-0 w-[280px] sm:w-[320px] md:w-[340px] p-6 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm hover:shadow-md transition-all flex flex-col gap-4 relative overflow-hidden group"
+                  data-index="4">
+                  <div class="flex items-center justify-between"><span
+                      class="font-display-lg text-headline-xl text-primary font-black opacity-20 group-hover:opacity-40 transition-opacity">05</span>
+                    <div
+                      class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-primary">
+                      <span class="material-symbols-outlined text-[20px]">speed</span>
+                    </div>
+                  </div>
+                  <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">FULFIL</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">PropelPad distributed
+                    node deployment, strict cold-chain compliance, zero stockouts, and lightning 5-minute kitchen prep
+                    dispatch.</p>
+                </div>
+                <div
+                  class="engine-card snap-center shrink-0 w-[280px] sm:w-[320px] md:w-[340px] p-6 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm hover:shadow-md transition-all flex flex-col gap-4 relative overflow-hidden group"
+                  data-index="5">
+                  <div class="flex items-center justify-between"><span
+                      class="font-display-lg text-headline-xl text-primary font-black opacity-20 group-hover:opacity-40 transition-opacity">06</span>
+                    <div
+                      class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-primary">
+                      <span class="material-symbols-outlined text-[20px]">trending_up</span>
+                    </div>
+                  </div>
+                  <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">SCALE</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Pincode expansion,
+                    dynamic re-ordering optimization, cross-channel bundling, and compounding repeat-customer economics.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center justify-center gap-4 pt-1 relative z-10">
+              <button aria-label="Previous step"
+                class="w-11 h-11 min-h-[44px] min-w-[44px] rounded-full bg-surface-container-lowest hover:bg-surface-container border border-outline-variant/30 flex items-center justify-center text-on-surface shadow-xs hover:shadow-md transition-all duration-150 active:scale-95 cursor-pointer select-none"
+                id="engine-slide-prev" type="button">
+                <span class="material-symbols-outlined text-[20px]">chevron_left</span>
+              </button>
+              <div class="flex items-center gap-2" id="engine-dots-track">
+                <button aria-label="Step 1"
+                  class="engine-dot h-2.5 rounded-full transition-all duration-300 w-8 bg-primary cursor-pointer"
+                  data-index="0" type="button"></button>
+                <button aria-label="Step 2"
+                  class="engine-dot h-2.5 rounded-full transition-all duration-300 w-2.5 bg-outline-variant/50 hover:bg-outline cursor-pointer"
+                  data-index="1" type="button"></button>
+                <button aria-label="Step 3"
+                  class="engine-dot h-2.5 rounded-full transition-all duration-300 w-2.5 bg-outline-variant/50 hover:bg-outline cursor-pointer"
+                  data-index="2" type="button"></button>
+                <button aria-label="Step 4"
+                  class="engine-dot h-2.5 rounded-full transition-all duration-300 w-2.5 bg-outline-variant/50 hover:bg-outline cursor-pointer"
+                  data-index="3" type="button"></button>
+                <button aria-label="Step 5"
+                  class="engine-dot h-2.5 rounded-full transition-all duration-300 w-2.5 bg-outline-variant/50 hover:bg-outline cursor-pointer"
+                  data-index="4" type="button"></button>
+                <button aria-label="Step 6"
+                  class="engine-dot h-2.5 rounded-full transition-all duration-300 w-2.5 bg-outline-variant/50 hover:bg-outline cursor-pointer"
+                  data-index="5" type="button"></button>
+              </div>
+              <button aria-label="Next step"
+                class="w-11 h-11 min-h-[44px] min-w-[44px] rounded-full bg-surface-container-lowest hover:bg-surface-container border border-outline-variant/30 flex items-center justify-center text-on-surface shadow-xs hover:shadow-md transition-all duration-150 active:scale-95 cursor-pointer select-none"
+                id="engine-slide-next" type="button">
+                <span class="material-symbols-outlined text-[20px]">chevron_right</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <script>
+            (function setupEngineCarousel() {
+              const slider = document.getElementById('operating-engine-slider');
+              const prevBtn = document.getElementById('engine-slide-prev');
+              const nextBtn = document.getElementById('engine-slide-next');
+              const dots = document.querySelectorAll('.engine-dot');
+              const cards = document.querySelectorAll('.engine-card');
+              if (!slider || !prevBtn || !nextBtn) return;
+
+              function getStepWidth() {
+                const firstCard = cards[0];
+                if (firstCard) {
+                  const style = window.getComputedStyle(slider);
+                  const gap = parseFloat(style.gap) || 20;
+                  return firstCard.offsetWidth + gap;
+                }
+                return 340;
+              }
+
+              function updateActiveDot(index) {
+                dots.forEach((dot, idx) => {
+                  if (idx === index) {
+                    dot.classList.remove('w-2.5', 'bg-outline-variant/50', 'hover:bg-outline');
+                    dot.classList.add('w-8', 'bg-primary');
+                  } else {
+                    dot.classList.remove('w-8', 'bg-primary');
+                    dot.classList.add('w-2.5', 'bg-outline-variant/50', 'hover:bg-outline');
+                  }
+                });
+              }
+
+              prevBtn.addEventListener('click', () => {
+                slider.scrollBy({ left: -getStepWidth(), behavior: 'smooth' });
+              });
+
+              nextBtn.addEventListener('click', () => {
+                slider.scrollBy({ left: getStepWidth(), behavior: 'smooth' });
+              });
+
+              dots.forEach(dot => {
+                dot.addEventListener('click', () => {
+                  const index = parseInt(dot.getAttribute('data-index') || '0', 10);
+                  if (cards[index]) {
+                    const cardLeft = cards[index].offsetLeft - slider.offsetLeft;
+                    slider.scrollTo({ left: cardLeft, behavior: 'smooth' });
+                    updateActiveDot(index);
+                  }
+                });
+              });
+
+              let scrollTimeout;
+              slider.addEventListener('scroll', () => {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(() => {
+                  const scrollCenter = slider.scrollLeft + (slider.clientWidth / 2);
+                  let closestIdx = 0;
+                  let minDiff = Infinity;
+                  cards.forEach((card, idx) => {
+                    const cardCenter = card.offsetLeft - slider.offsetLeft + (card.offsetWidth / 2);
+                    const diff = Math.abs(scrollCenter - cardCenter);
+                    if (diff < minDiff) {
+                      minDiff = diff;
+                      closestIdx = idx;
+                    }
+                  });
+                  updateActiveDot(closestIdx);
+                }, 60);
+              }, { passive: true });
+            })();
+        </script>
+      </section>
+      <!-- SECTION 4: OMNICHANNEL DISTRIBUTION ECOSYSTEM -->
+      <section class="w-full py-16 lg:py-24 bg-surface">
+        <div class="max-w-[1360px] mx-auto px-6 lg:px-12 flex flex-col gap-12">
+          <div class="flex flex-col gap-3">
+            <span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-widest">Multi-Channel
+              Infrastructure</span>
+            <h2 class="font-headline-xl text-headline-xl font-extrabold text-on-surface">Omnichannel Distribution
+              Ecosystem</h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+              Meeting consumers wherever hunger or grocery necessity strikes with tailored platform execution.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Channel 1: Quick Commerce -->
+            <div
+              class="rounded-2xl bg-surface-container-lowest p-8 flex flex-col justify-between gap-6 shadow-sm hover:shadow-md transition-shadow">
+              <div class="flex flex-col gap-4">
+                <div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center text-primary">
+                  <span class="material-symbols-outlined text-[26px]">electric_bolt</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span
+                    class="px-2.5 py-0.5 rounded-full bg-[#ECFDF5] text-[#065F46] font-label-sm text-label-sm font-bold">15–30
+                    MIN</span>
+                  <span class="font-label-md text-label-md text-on-surface-variant">Hyper-Speed</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Quick Commerce</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Ultra-fast cart additions, routine household refills, and impulse cravings. Direct fulfillment inside
+                  micro dark stores within 2km of urban households.
+                </p>
+              </div>
+              <div class="flex flex-col gap-3 pt-4">
+                <div class="font-label-sm text-label-sm text-on-surface-variant uppercase font-bold tracking-wider">
+                  Active Platforms</div>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-3 py-1.5 rounded-lg bg-surface-container font-label-sm text-label-sm font-semibold text-on-surface">Blinkit</span>
+                  <span
+                    class="px-3 py-1.5 rounded-lg bg-surface-container font-label-sm text-label-sm font-semibold text-on-surface">Zepto</span>
+                  <span
+                    class="px-3 py-1.5 rounded-lg bg-surface-container font-label-sm text-label-sm font-semibold text-on-surface">Swiggy
+                    Instamart</span>
+                </div>
+              </div>
+            </div>
+            <!-- Channel 2: Food Aggregators -->
+            <div
+              class="rounded-2xl bg-surface-container-lowest p-8 flex flex-col justify-between gap-6 shadow-sm hover:shadow-md transition-shadow">
+              <div class="flex flex-col gap-4">
+                <div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center text-primary">
+                  <span class="material-symbols-outlined text-[26px]">moped</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span
+                    class="px-2.5 py-0.5 rounded-full bg-[#FFFBEB] text-[#92400E] font-label-sm text-label-sm font-bold">MADE-TO-ORDER</span>
+                  <span class="font-label-md text-label-md text-on-surface-variant">Cloud Kitchens</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Food Aggregators</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Try Eat Now™ branded cloud kitchens. High-margin snack menus, hot comfort bowls, and craft beverages
+                  prepared within 5 minutes of order placement.
+                </p>
+              </div>
+              <div class="flex flex-col gap-3 pt-4">
+                <div class="font-label-sm text-label-sm text-on-surface-variant uppercase font-bold tracking-wider">
+                  Active Platforms</div>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-3 py-1.5 rounded-lg bg-surface-container font-label-sm text-label-sm font-semibold text-on-surface">Swiggy
+                    Food</span>
+                  <span
+                    class="px-3 py-1.5 rounded-lg bg-surface-container font-label-sm text-label-sm font-semibold text-on-surface">Zomato</span>
+                  <span
+                    class="px-3 py-1.5 rounded-lg bg-surface-container font-label-sm text-label-sm font-semibold text-on-surface">ONDC
+                    Food</span>
+                </div>
+              </div>
+            </div>
+            <!-- Channel 3: E-Commerce & D2C -->
+            <div
+              class="rounded-2xl bg-surface-container-lowest p-8 flex flex-col justify-between gap-6 shadow-sm hover:shadow-md transition-shadow">
+              <div class="flex flex-col gap-4">
+                <div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center text-primary">
+                  <span class="material-symbols-outlined text-[26px]">public</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span
+                    class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-bold">NATIONWIDE</span>
+                  <span class="font-label-md text-label-md text-on-surface-variant">Pantry Packs</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">E-Commerce &amp; D2C</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Multi-pack snacking hampers, artisan beverage crates, and recurring monthly pantry subscriptions with
+                  pan-India courier delivery.
+                </p>
+              </div>
+              <div class="flex flex-col gap-3 pt-4">
+                <div class="font-label-sm text-label-sm text-on-surface-variant uppercase font-bold tracking-wider">
+                  Active Platforms</div>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-3 py-1.5 rounded-lg bg-surface-container font-label-sm text-label-sm font-semibold text-on-surface">Amazon
+                    India</span>
+                  <span
+                    class="px-3 py-1.5 rounded-lg bg-surface-container font-label-sm text-label-sm font-semibold text-on-surface">Direct
+                    Webstore</span>
+                  <span
+                    class="px-3 py-1.5 rounded-lg bg-surface-container font-label-sm text-label-sm font-semibold text-on-surface">B2B
+                    Trade Networks</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION 5: PRODUCT TRADING & SOURCING IN DEPTH (VERTICAL 1 SPOTLIGHT) -->
+      <section class="w-full py-16 lg:py-24 bg-surface-container-low">
+        <div class="max-w-[1360px] mx-auto px-6 lg:px-12 flex flex-col gap-12">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-6 flex flex-col gap-6">
+              <div
+                class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-surface-container-lowest max-w-max text-primary font-label-sm text-label-sm font-bold shadow-xs">
+                <span class="material-symbols-outlined text-[16px]">verified_user</span>
+                <span class="">VERTICAL 1 SPOTLIGHT</span>
+              </div>
+              <h2 class="font-headline-xl text-headline-xl font-extrabold text-on-surface">
+                Strong Products. Efficient Sourcing. Digital Distribution.
+              </h2>
+              <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                Agricultural trading isn't just about moving tonnage — it's about consistency, shelf-life preservation,
+                and zero-delay handoffs to high-frequency quick commerce hubs.
+              </p>
+              <div class="flex flex-col gap-4">
+                <div class="flex items-start gap-4 p-4 rounded-xl bg-surface-container-lowest shadow-xs">
+                  <div class="p-2 rounded-lg bg-secondary-container text-primary shrink-0">
+                    <span class="material-symbols-outlined text-[22px]">agriculture</span>
+                  </div>
+                  <div>
+                    <h4 class="font-title-md text-title-md font-bold text-on-surface">Nashik &amp; Lasalgaon Onion
+                      Corridors</h4>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">Direct farm gate grading ensuring dry
+                      matter content, minimal transit loss, and standardized grading for consumer retail packs.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4 p-4 rounded-xl bg-surface-container-lowest shadow-xs">
+                  <div class="p-2 rounded-lg bg-secondary-container text-primary shrink-0">
+                    <span class="material-symbols-outlined text-[22px]">thermostat</span>
+                  </div>
+                  <div>
+                    <h4 class="font-title-md text-title-md font-bold text-on-surface">Cold Chain &amp; Quality Staging
+                    </h4>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">Transit temperature monitoring ensuring
+                      raw ingredients reach cloud kitchens and retail consumers at peak freshness.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4 p-4 rounded-xl bg-surface-container-lowest shadow-xs">
+                  <div class="p-2 rounded-lg bg-secondary-container text-primary shrink-0">
+                    <span class="material-symbols-outlined text-[22px]">inventory</span>
+                  </div>
+                  <div>
+                    <h4 class="font-title-md text-title-md font-bold text-on-surface">Commodity Hedging &amp; Volume
+                      Pricing</h4>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">Predictable wholesale pricing
+                      agreements that buffer retail partners against volatile mandi price spikes.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+              <div class="rounded-2xl overflow-hidden h-64 bg-surface-container">
+                <img class="w-full h-full object-cover"
+                  data-alt="Golden sunlit fresh onions piled high in wooden harvest crates in an Indian agricultural marketplace, clean natural sunlight, sharp focus, rich earthy colors."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo_EBYI-QgwOHP_9CDOb0N_IEMd5EciWmpiych5eOLE6rePcOjVLJZSROkvpuEVuvaAeic9O8Qx9sm35ZeeeHhlkXRHBPSbRk0BgWozk_HHEu-PQJH9N735rHdozugVEg3G3JqcExF-1VMETb-3FjBFMlu7-CNDHbkVACk_iYVAH3o7jdYHqEs2sl7up71JDhALYFBcFmZvy7c4r9K-n8FL7nvS1yQoA4GUGyW1BGuXvPToNwZGdl0BA">
+              </div>
+              <div class="rounded-2xl overflow-hidden h-64 bg-surface-container mt-6">
+                <img class="w-full h-full object-cover"
+                  data-alt="Modern logistics sorting line for fresh vegetables, automated sorting conveyors, workers in sanitary green aprons carefully grading farm goods, crisp industrial food production photography."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmt3FehmN5CC4vdbwiKlsUYr8amY3eI30QPhiiLZai67ERkPfiD4fmw9jF8zjOv4xqIXATq4zfC7Oz9oKPC1NmspaasUMw_Z2T7Smg418SBivRefaf7zlXAYCdYJngC0PgA7Ychyj4slWKueyjAhzzewfVPPE2razkSXC11JXA7_Ir1KcWsKQm_0_M32r-XgkvTqKWejZL_-wu4nb9hc8XJ8j92yLBmiEvF-7mXLS9TTKfNRL9vCOrIQ">
+              </div>
+              <div class="rounded-2xl overflow-hidden h-64 bg-surface-container -mt-6">
+                <img class="w-full h-full object-cover"
+                  data-alt="Close up of fresh ginger, garlic cloves, and farm spices neatly displayed on a rustic slate kitchen surface, vibrant organic colors, culinary styling."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJKZ-R5yLFUZ3j9JlwojfwLNudUy1Ujn-Tne-2oPQ40LqsA5AeB3QYRXJACfa7ithpSRw2SYqlOib_wWHhSY9Wp89Vn60uvSAYGlWFx182vAOUHNAwlO1XZSEZuBRMo6TOb-gySwtviu-dIR0n1mXir81mb77nRkyjvkgNfhAvEqT1-crw43tFipjuMo4uW4HtwW4p_891MTYPTooWLYKCMya5cOj8MPfRIjJqWK66f5hrzmIc5oBpoQ">
+              </div>
+              <div class="rounded-2xl overflow-hidden h-64 bg-surface-container">
+                <img class="w-full h-full object-cover"
+                  data-alt="Refrigerated dark store delivery van loading packaged food boxes in an urban distribution center, morning mist, sleek fleet branding with TEN Foods green accents."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7f18QmsUY0u3WA752JPQmUo0bNALZDDnErmfWR6K74l9R9P7JQP3kDbmjRVa8CBEScGHK1Q53JNPm5iE2caL4LxZmn5_yNWxEN6V_mdBTCN3PszZzm5C-jgif-DXxzKE6Pcd1GYSqSMSK1wewQEwujxXGkpIDC3KTME6Z2ImqZTwc-Z0feI2-kJcz1gw7X0U6AfXk3HTMEFj4A6N7qEZH2dPC1GO6GL5WcRyyMzElOuWbRWmEfU_Dng">
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>
+          (function setupEngineCarousel() {
+            const slider = document.getElementById('operating-engine-slider');
+            const prevBtn = document.getElementById('engine-slide-prev');
+            const nextBtn = document.getElementById('engine-slide-next');
+            const dots = document.querySelectorAll('.engine-dot');
+            const cards = document.querySelectorAll('.engine-card');
+            if (!slider || !prevBtn || !nextBtn) return;
+
+            function getStepWidth() {
+              const firstCard = cards[0];
+              if (firstCard) {
+                const style = window.getComputedStyle(slider);
+                const gap = parseFloat(style.gap) || 20;
+                return firstCard.offsetWidth + gap;
+              }
+              return 340;
+            }
+
+            function updateActiveDot(index) {
+              dots.forEach((dot, idx) => {
+                if (idx === index) {
+                  dot.classList.remove('w-2.5', 'bg-outline-variant/50', 'hover:bg-outline');
+                  dot.classList.add('w-8', 'bg-primary');
+                } else {
+                  dot.classList.remove('w-8', 'bg-primary');
+                  dot.classList.add('w-2.5', 'bg-outline-variant/50', 'hover:bg-outline');
+                }
+              });
+            }
+
+            prevBtn.addEventListener('click', () => {
+              slider.scrollBy({ left: -getStepWidth(), behavior: 'smooth' });
+            });
+
+            nextBtn.addEventListener('click', () => {
+              slider.scrollBy({ left: getStepWidth(), behavior: 'smooth' });
+            });
+
+            dots.forEach(dot => {
+              dot.addEventListener('click', () => {
+                const index = parseInt(dot.getAttribute('data-index') || '0', 10);
+                if (cards[index]) {
+                  const cardLeft = cards[index].offsetLeft - slider.offsetLeft;
+                  slider.scrollTo({ left: cardLeft, behavior: 'smooth' });
+                  updateActiveDot(index);
+                }
+              });
+            });
+
+            let scrollTimeout;
+            slider.addEventListener('scroll', () => {
+              clearTimeout(scrollTimeout);
+              scrollTimeout = setTimeout(() => {
+                const scrollCenter = slider.scrollLeft + (slider.clientWidth / 2);
+                let closestIdx = 0;
+                let minDiff = Infinity;
+                cards.forEach((card, idx) => {
+                  const cardCenter = card.offsetLeft - slider.offsetLeft + (card.offsetWidth / 2);
+                  const diff = Math.abs(scrollCenter - cardCenter);
+                  if (diff < minDiff) {
+                    minDiff = diff;
+                    closestIdx = idx;
+                  }
+                });
+                updateActiveDot(closestIdx);
+              }, 60);
+            }, { passive: true });
+          })();
+        </script>
+      </section>
+      <!-- SECTION 6: TRY EAT NOW CONSUMER FOOD SHOWCASE (VERTICAL 2 SPOTLIGHT) -->
+      <section class="w-full py-16 lg:py-24 bg-surface">
+        <div class="max-w-[1360px] mx-auto px-6 lg:px-12 flex flex-col gap-12">
+          <!-- Section Header with Official Logo -->
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+            <div class="flex flex-col gap-3">
+              <div class="flex items-center gap-3">
+                <img alt="Try Eat Now Logo" class="h-10 w-auto object-contain"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCn7lc6ORPaT8VNXhKMX1tKhgrCKHKplA3ISJE5FELJTdNVJ1bQcynyPjrhuBlprPyeZk44-icGMMk4n0OXi9P_iDL6D8eH9Oy56UdMvzbsFGWq7u2NGbVz3seTrqHJfQ6SdgEjOdqvetW1RtBqFC7ofYzVAUtHHPIox7VUvUWSlska4mMYpvKMtR_UPaGUor6BvqcqJGHFlQDSUaQj8lkfpYAZTPQ9ttVpVHwzIKDwwOGQRyfJKUOwD901YHDdZMEjt8I">
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-secondary-container font-label-sm text-label-sm text-on-secondary-fixed font-bold">KITCHEN
+                  BRAND</span>
+              </div>
+              <h2 class="font-headline-xl text-headline-xl font-extrabold text-on-surface">
+                Quick Food. Made Simple. Prepared Fast. Delivered Fresh.
+              </h2>
+              <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                A menu created specifically for cravings on Swiggy and Zomato. Zero complicated kitchen operations. 100%
+                taste consistency.
+              </p>
+            </div>
+            <div class="flex items-center gap-2 self-start md:self-auto">
+              <span
+                class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold">
+                <span class="material-symbols-outlined text-[18px]">bolt</span> Ready in under 5 Mins
+              </span>
+            </div>
+          </div>
+          <!-- Menu Category Filter Pills -->
+          <div class="flex flex-wrap items-center gap-2 overflow-x-auto pb-2" id="menu-tabs"><button
+              class="menu-tab-btn active min-h-[44px] px-5 py-2.5 rounded-full font-label-md text-label-md transition-all duration-150 active:scale-95 cursor-pointer select-none bg-on-surface text-surface-container-lowest shadow-xs"
+              data-target="all" type="button">All Specialties</button><button
+              class="menu-tab-btn min-h-[44px] px-5 py-2.5 rounded-full font-label-md text-label-md hover:bg-surface-container-highest transition-all duration-150 active:scale-95 cursor-pointer select-none bg-surface-container text-on-surface"
+              data-target="melts" type="button">Pizzas &amp; Melts</button><button
+              class="menu-tab-btn min-h-[44px] px-5 py-2.5 rounded-full font-label-md text-label-md hover:bg-surface-container-highest transition-all duration-150 active:scale-95 cursor-pointer select-none bg-surface-container text-on-surface"
+              data-target="sandwiches" type="button">Sandwiches &amp; Burgers</button><button
+              class="menu-tab-btn min-h-[44px] px-5 py-2.5 rounded-full font-label-md text-label-md hover:bg-surface-container-highest transition-all duration-150 active:scale-95 cursor-pointer select-none bg-surface-container text-on-surface"
+              data-target="breakfast" type="button">Hot Breakfast</button><button
+              class="menu-tab-btn min-h-[44px] px-5 py-2.5 rounded-full font-label-md text-label-md hover:bg-surface-container-highest transition-all duration-150 active:scale-95 cursor-pointer select-none bg-surface-container text-on-surface"
+              data-target="beverages" type="button">Chai &amp; Craft Sodas</button></div>
+          <!-- Food Menu Cards Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="menu-grid">
+            <!-- Food Card 1 -->
+            <div
+              class="menu-card rounded-2xl bg-surface-container-lowest overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
+              data-category="melts" style="display: flex;">
+              <div class="relative h-56 w-full overflow-hidden bg-surface-container">
+                <img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  data-alt="Appetizing personal 8-inch Margherita pizza with blistered crust, melted mozzarella cheese, fresh basil leaves, and golden olive oil drizzle on a rustic wooden board, warm cinematic food styling."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVPR3vtoqmXvz1VRlj9IbyU3GWd4I_ysAcix9og9mSQhUOSFr2vPSBkMPIvIqc5nQpZ_ZcMujz_Y2w75y3jBpvNhaOWX1QhdQee0eYwukHjOXAb5TgkFzEvJo3wl7_u1NVIpeqPWcyAvECHuZxe498JMqAtfbfiFU9GCbqFUjxtfS_A3vpP0BWehATTNjdVVuPmUAaON1ht9P0oyXpY61yon9mHceIO_OC8ZLyL5PlRudSeDY2l9CVeg">
+                <div class="absolute top-3 left-3">
+                  <span
+                    class="px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm font-bold">Chef's
+                    Special</span>
+                </div>
+                <div class="absolute bottom-3 right-3">
+                  <span
+                    class="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-bold">5
+                    Min Prep</span>
+                </div>
+              </div>
+              <div class="p-6 flex flex-col gap-3">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Artisan Cheesy Melt Pizza</h3>
+                  <span class="font-headline-sm text-title-md font-bold text-primary">₹189</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Convection baked crust with 3-cheese blend
+                  and rich herb marinara sauce. Delivered crisp.</p>
+                <div class="pt-2 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+                  <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary"></span> 100%
+                    Vegetarian</span>
+                  <span class="">Bake: 4 mins</span>
+                </div>
+              </div>
+            </div>
+            <!-- Food Card 2 -->
+            <div
+              class="menu-card rounded-2xl bg-surface-container-lowest overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
+              data-category="sandwiches" style="display: flex;">
+              <div class="relative h-56 w-full overflow-hidden bg-surface-container">
+                <img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  data-alt="Crispy golden toasted Mumbai Masala Club Sandwich sliced diagonally showing vibrant spiced potato filling, mint chutney, melted cheese, and fresh cucumber layers with crisp French fries beside it, appetizing food commercial photography."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQnlkHQ4SZlPEDfKzDXH9LDD3DgEgN_hfhEZUSLpgAr7peymJPkqzqjSvJBT5SOWlqN0H-BUl-t_9-leiyC-wIXeiLNrIQcY2r4dvljyy4fypzZcxoUf4zhEbSknjIAKIf1RKbAcns2k56IbTnokGKM_H2QT9yIDbsTqYTRhzEkxTPa_tvuuu3gmoLF0pDKyjbD4MV0K4APopw7jjQw2M7wBUhDTS3-_gpjyidwNI61FG969mKPjhzjA">
+                <div class="absolute top-3 left-3">
+                  <span
+                    class="px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm font-bold">Bestseller</span>
+                </div>
+                <div class="absolute bottom-3 right-3">
+                  <span
+                    class="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-bold">4
+                    Min Prep</span>
+                </div>
+              </div>
+              <div class="p-6 flex flex-col gap-3">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Mumbai Masala Griller</h3>
+                  <span class="font-headline-sm text-title-md font-bold text-primary">₹149</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Triple-layer jumbo sandwich with spiced
+                  potato mash, fiery mint chutney, and cheddar cheese.</p>
+                <div class="pt-2 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+                  <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary"></span>
+                    Contact-Grilled</span>
+                  <span class="">Fries Included</span>
+                </div>
+              </div>
+            </div>
+            <!-- Food Card 3 -->
+            <div
+              class="menu-card rounded-2xl bg-surface-container-lowest overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
+              data-category="sandwiches" style="display: flex;">
+              <div class="relative h-56 w-full overflow-hidden bg-surface-container">
+                <img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  data-alt="Juicy gourmet veggie burger with toasted brioche bun, crunchy herb patty, crisp romaine lettuce, ripe tomato slice, and creamy signature spicy mayo dressing on black slate, commercial studio lighting."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz2XB8T4dkOy4b4WynfD6ixMIo1lxqd3y_WeFP0htTRvxWHo510Tj2k1n90BxHmt9MPbNH_NpKE-ir9nsNl9DjN-0_iqkG3Zgu-nduwQKMFPQ57zC-n4sgnh9krC-o_H4DADVW6gLUxOJ9jFQX8-LUkwnhXGeXNqqNvsB0uNHYOu53UYmyIbshwyGpbBlgfCFMhuMHQ_m30G4Rhv-MHmaKl6oIpGoCtt-oINZjbWBj2phIEMlSZviOaw">
+                <div class="absolute top-3 left-3">
+                  <span
+                    class="px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm font-bold">Crispy</span>
+                </div>
+                <div class="absolute bottom-3 right-3">
+                  <span
+                    class="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-bold">Air-Fried</span>
+                </div>
+              </div>
+              <div class="p-6 flex flex-col gap-3">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Crunchy Veggie Brioche Burger
+                  </h3>
+                  <span class="font-headline-sm text-title-md font-bold text-primary">₹169</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Air-fried herb &amp; corn patty, house
+                  special burger sauce, in buttery toasted brioche.</p>
+                <div class="pt-2 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+                  <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary"></span> Zero
+                    Deep-Frying</span>
+                  <span class="">100% Crunch</span>
+                </div>
+              </div>
+            </div>
+            <!-- Food Card 4 -->
+            <div
+              class="menu-card rounded-2xl bg-surface-container-lowest overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
+              data-category="breakfast" style="display: flex;">
+              <div class="relative h-56 w-full overflow-hidden bg-surface-container">
+                <img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  data-alt="Traditional hot Indori Poha garnished with crunchy sev, fresh coriander, pomegranate seeds, and fresh lime wedge in a modern ceramic breakfast bowl, warm morning sunlight, wholesome culinary photography."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0fdHGYBOgD4aEnCxpAzFAhJ3LA-Da-kZxLOw3YhcYRrKNd4Xk6rIe7pbeQdzgjTbNTL4IKTMluPT8ScDM_mUw00AUiChSkSMOSXzEOxW1Tlb7sIzWUsOAfgz8wquFACitILofj0TFlZh5cGchox7kbrKVPYye-9OLMavIv6tw0PzQysIanzIF_wL-W8-g9-bTUaHub1PW9tYe6Lw1ie2lXPrwBe7gchLWDQDIZXuZ797v7lBn7n33ow">
+                <div class="absolute top-3 left-3">
+                  <span
+                    class="px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm font-bold">Morning
+                    Fuel</span>
+                </div>
+                <div class="absolute bottom-3 right-3">
+                  <span
+                    class="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-bold">Instant
+                    Steam</span>
+                </div>
+              </div>
+              <div class="p-6 flex flex-col gap-3">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Steaming Indori Poha</h3>
+                  <span class="font-headline-sm text-title-md font-bold text-primary">₹99</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Flattened rice tempered with mustard,
+                  turmeric, peanuts, and ratlami sev topping.</p>
+                <div class="pt-2 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+                  <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary"></span>
+                    Wholesome</span>
+                  <span class="">Prepped in 3 mins</span>
+                </div>
+              </div>
+            </div>
+            <!-- Food Card 5 -->
+            <div
+              class="menu-card rounded-2xl bg-surface-container-lowest overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
+              data-category="beverages" style="display: flex;">
+              <div class="relative h-56 w-full overflow-hidden bg-surface-container">
+                <img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  data-alt="Authentic steaming Masala Karak Chai poured into a traditional clay kulhad with scattered cardamom pods, cinnamon stick, and fresh ginger, rich warm moody cafe photography."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6DSG8hzpGVJyHeSd1cg5x2Fktq02RF8SrwDC6B9iLeh4GXJ5UgPINTrc763447uKnLRxMsfyhFsmsK2ObSHfbz4tSjVkdrrQKc4H-YZV6igvDLQ7t7-nqvXdtcZcQjnSdtFlRAvlO5RV68FP5_0t3m8dEdEzYVIdiX0pCsOAmWc7EYMhyLo7azndwgPwFsXccSF8DzL3eVQkymZa1gPxz9BU_AmkYs1zCI19EggSDJmdzJ-do5hJymA">
+                <div class="absolute top-3 left-3">
+                  <span
+                    class="px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm font-bold">All-Day
+                    Craving</span>
+                </div>
+                <div class="absolute bottom-3 right-3">
+                  <span
+                    class="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-bold">Thermal
+                    Flask</span>
+                </div>
+              </div>
+              <div class="p-6 flex flex-col gap-3">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Karak Masala Chai Flask</h3>
+                  <span class="font-headline-sm text-title-md font-bold text-primary">₹119</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Brewed with crushed fresh ginger, cardamom,
+                  and Assam CTC tea. Stays piping hot for 45 mins.</p>
+                <div class="pt-2 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+                  <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary"></span> Serves
+                    2</span>
+                  <span class="">Spill-Proof Pack</span>
+                </div>
+              </div>
+            </div>
+            <!-- Food Card 6 -->
+            <div
+              class="menu-card rounded-2xl bg-surface-container-lowest overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
+              data-category="beverages" style="display: flex;">
+              <div class="relative h-56 w-full overflow-hidden bg-surface-container">
+                <img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  data-alt="Glass bottle of sparkling iced craft Jeera Soda with water droplets on the glass, fresh lime slice, mint sprig, effervescent bubbles rising against emerald green and amber background."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZEWi8i_0NWHyA_Tsz47oaJqipjpF9P4FDvtzSk02gjsgY03auTBghJMF94slbeUfJjYFA8CHBImY7GWbpj5vCaI8TIEmUKMFUN3umpq-tdVRi_eyOWzqnApR-8vChfyOn8yTwRrz-bYPbg3oRNGfZpevRbNHLCGgsDqKja7cd_X5LDQ2g5OFza8WRZk0k2R_VQ2giZ3hewOK7IPP7g6RKTwMGaKqSFnR6etSOrC0c7OYuN6jEvSalPw">
+                <div class="absolute top-3 left-3">
+                  <span
+                    class="px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm font-bold">Try
+                    Eat Now Classic</span>
+                </div>
+                <div class="absolute bottom-3 right-3">
+                  <span
+                    class="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-bold">Chilled</span>
+                </div>
+              </div>
+              <div class="p-6 flex flex-col gap-3">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Sparkling Craft Jeera Soda
+                  </h3>
+                  <span class="font-headline-sm text-title-md font-bold text-primary">₹69</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Zesty roasted cumin, rock salt, tangy
+                  lemon, and sharp sparkling soda. The ultimate palate refresher.</p>
+                <div class="pt-2 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+                  <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary"></span> Made in
+                    India</span>
+                  <span class="">Digestive &amp; Crisp</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION 7: FUTURE CONSUMER PACKAGED GOODS (VERTICAL 3 SPOTLIGHT) -->
+      <section class="w-full py-16 lg:py-24 bg-surface-container-low">
+        <div class="max-w-[1360px] mx-auto px-6 lg:px-12 flex flex-col gap-12">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div
+              class="lg:col-span-6 order-2 lg:order-1 rounded-2xl overflow-hidden bg-surface-container-lowest p-8 shadow-sm">
+              <div class="flex flex-col gap-6">
+                <div class="flex items-center justify-between">
+                  <span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">CPG Pipeline
+                    2025</span>
+                  <span
+                    class="px-3 py-1 rounded-full bg-secondary-container font-label-sm text-label-sm text-on-secondary-fixed font-bold">In
+                    Formulation</span>
+                </div>
+                <div class="relative h-72 w-full rounded-xl overflow-hidden bg-surface-container">
+                  <img class="w-full h-full object-cover"
+                    data-alt="Futuristic pantry shelves with designer snack packaging, clean matte finish bags of roasted multigrain namkeen, smart protein cookies, and slim sparkling botanical iced teas, clean modern retail display."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0KiSNAKHvCsA-pvPe6NyqR_rhkFHlc-AOH7ClXyEnnM67iIaXBLUW6LXnA3-Shqjbt3bszN4w3VvGTMj-RbnhFhRTAqvKhMKJ-gHnSw9BL2L1J9p8w1EwkfUwC6D0V9AEAPWw2NfDS90ay28Rxj2XOvCB2Y9kDzP2ki5_ana_qoBdb1n7bSDsW7S0uetExM7YjJsWhyB5UCm2PLbLqnaWsBASv4w0o-RpGgfPyi5F7DwU68GRICHV7Q">
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                  <div class="p-4 rounded-xl bg-surface">
+                    <div class="font-headline-sm text-headline-sm font-bold text-on-surface">30–45 Days</div>
+                    <div class="font-body-sm text-body-sm text-on-surface-variant">Concept to First Test SKU</div>
+                  </div>
+                  <div class="p-4 rounded-xl bg-surface">
+                    <div class="font-headline-sm text-headline-sm font-bold text-on-surface">100% Native</div>
+                    <div class="font-body-sm text-body-sm text-on-surface-variant">Designed for Zepto &amp; Blinkit
+                      search</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lg:col-span-6 order-1 lg:order-2 flex flex-col gap-6">
+              <div
+                class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-surface-container-lowest max-w-max text-primary font-label-sm text-label-sm font-bold shadow-xs">
+                <span class="material-symbols-outlined text-[16px]">new_releases</span>
+                <span class="">VERTICAL 3 PREVIEW</span>
+              </div>
+              <h2 class="font-headline-xl text-headline-xl font-extrabold text-on-surface">
+                The Next TEN Foods Brand Could Be in Your Cart Soon.
+              </h2>
+              <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                Legacy FMCG brands were engineered for supermarket end-caps and 6-month shelf cycles. TEN Foods packaged
+                goods are designed specifically for quick commerce algorithms, high reorder frequencies, and instant
+                snacking satisfaction.
+              </p>
+              <ul class="flex flex-col gap-3 text-on-surface">
+                <li class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                  <span class="font-body-md text-body-md"><strong class="font-semibold">Bite-Sized Pricing:</strong>
+                    Optimized impulse price points between ₹40 and ₹120 for instant cart additions.</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                  <span class="font-body-md text-body-md"><strong class="font-semibold">Regional Palate
+                      Reinvention:</strong> Familiar Indian flavor notes (hing jeera, peri peri chaat, filter coffee
+                    crunch).</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                  <span class="font-body-md text-body-md"><strong class="font-semibold">Clean Ingredient
+                      Formulations:</strong> Real spices, zero palm oil filler, and sustainable shelf-stable
+                    packaging.</span>
+                </li>
+              </ul>
+              <div class="pt-2">
+                <a class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-secondary-container hover:bg-secondary-fixed text-on-secondary-fixed font-label-lg text-label-lg transition-colors"
+                  href="#partner-form">
+                  <span class="">Co-create an FMCG Brand with TEN</span>
+                  <span class="material-symbols-outlined text-[18px]">east</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>
+          (function setupEngineCarousel() {
+            const slider = document.getElementById('operating-engine-slider');
+            const prevBtn = document.getElementById('engine-slide-prev');
+            const nextBtn = document.getElementById('engine-slide-next');
+            const dots = document.querySelectorAll('.engine-dot');
+            const cards = document.querySelectorAll('.engine-card');
+            if (!slider || !prevBtn || !nextBtn) return;
+
+            function getStepWidth() {
+              const firstCard = cards[0];
+              if (firstCard) {
+                const style = window.getComputedStyle(slider);
+                const gap = parseFloat(style.gap) || 20;
+                return firstCard.offsetWidth + gap;
+              }
+              return 340;
+            }
+
+            function updateActiveDot(index) {
+              dots.forEach((dot, idx) => {
+                if (idx === index) {
+                  dot.classList.remove('w-2.5', 'bg-outline-variant/50', 'hover:bg-outline');
+                  dot.classList.add('w-8', 'bg-primary');
+                } else {
+                  dot.classList.remove('w-8', 'bg-primary');
+                  dot.classList.add('w-2.5', 'bg-outline-variant/50', 'hover:bg-outline');
+                }
+              });
+            }
+
+            prevBtn.addEventListener('click', () => {
+              slider.scrollBy({ left: -getStepWidth(), behavior: 'smooth' });
+            });
+
+            nextBtn.addEventListener('click', () => {
+              slider.scrollBy({ left: getStepWidth(), behavior: 'smooth' });
+            });
+
+            dots.forEach(dot => {
+              dot.addEventListener('click', () => {
+                const index = parseInt(dot.getAttribute('data-index') || '0', 10);
+                if (cards[index]) {
+                  const cardLeft = cards[index].offsetLeft - slider.offsetLeft;
+                  slider.scrollTo({ left: cardLeft, behavior: 'smooth' });
+                  updateActiveDot(index);
+                }
+              });
+            });
+
+            let scrollTimeout;
+            slider.addEventListener('scroll', () => {
+              clearTimeout(scrollTimeout);
+              scrollTimeout = setTimeout(() => {
+                const scrollCenter = slider.scrollLeft + (slider.clientWidth / 2);
+                let closestIdx = 0;
+                let minDiff = Infinity;
+                cards.forEach((card, idx) => {
+                  const cardCenter = card.offsetLeft - slider.offsetLeft + (card.offsetWidth / 2);
+                  const diff = Math.abs(scrollCenter - cardCenter);
+                  if (diff < minDiff) {
+                    minDiff = diff;
+                    closestIdx = idx;
+                  }
+                });
+                updateActiveDot(closestIdx);
+              }, 60);
+            }, { passive: true });
+          })();
+        </script>
+      </section>
+      <!-- SECTION 8: WHY TEN FOODS (THE 5 STRATEGIC MOATS) -->
+      <section class="w-full py-16 lg:py-24 bg-surface">
+        <div class="max-w-[1360px] mx-auto px-6 lg:px-12 flex flex-col gap-14">
+          <div class="text-center max-w-3xl mx-auto flex flex-col gap-3">
+            <span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-widest">Defensible
+              Advantages</span>
+            <h2 class="font-headline-xl text-headline-xl font-extrabold text-on-surface">Why TEN Foods</h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant">
+              Five competitive pillars engineered to outperform traditional food conglomerates in speed, capital
+              efficiency, and digital execution.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Moat 1 -->
+            <div
+              class="p-8 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow flex flex-col gap-4">
+              <div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center text-primary">
+                <span class="material-symbols-outlined text-[26px]">devices</span>
+              </div>
+              <div class="font-label-sm text-label-sm text-primary font-bold">MOAT 01</div>
+              <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Digital-First Distribution</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Built from day one for the modern Indian consumer who shops through smartphones, expects delivery in
+                under 30 minutes, and makes spontaneous food decisions.
+              </p>
+            </div>
+            <!-- Moat 2 -->
+            <div
+              class="p-8 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow flex flex-col gap-4">
+              <div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center text-primary">
+                <span class="material-symbols-outlined text-[26px]">hub</span>
+              </div>
+              <div class="font-label-sm text-label-sm text-primary font-bold">MOAT 02</div>
+              <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Strong Supply Chain Capability
+              </h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Direct farmer networks, localized cold chain hubs, and tight logistics routing that minimize transit
+                degradation, lower spoilage, and guarantee unit margin stability.
+              </p>
+            </div>
+            <!-- Moat 3 -->
+            <div
+              class="p-8 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow flex flex-col gap-4">
+              <div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center text-primary">
+                <span class="material-symbols-outlined text-[26px]">share</span>
+              </div>
+              <div class="font-label-sm text-label-sm text-primary font-bold">MOAT 03</div>
+              <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Omnichannel Playbook</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Not reliant on a single platform. We straddle Quick Commerce, food aggregator kitchens, B2B
+                institutional supply, and Direct-to-Consumer digital sales.
+              </p>
+            </div>
+            <!-- Moat 4 -->
+            <div
+              class="p-8 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow flex flex-col gap-4">
+              <div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center text-primary">
+                <span class="material-symbols-outlined text-[26px]">lightbulb</span>
+              </div>
+              <div class="font-label-sm text-label-sm text-primary font-bold">MOAT 04</div>
+              <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Asset-Light Expansion</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Micro-kitchen pods, smart standardized equipment, and contract processing eliminate heavy
+                brick-and-mortar capex and enable 14-day node rollouts.
+              </p>
+            </div>
+            <!-- Moat 5 -->
+            <div
+              class="p-8 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow flex flex-col gap-4 md:col-span-2 lg:col-span-2">
+              <div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center text-primary">
+                <span class="material-symbols-outlined text-[26px]">analytics</span>
+              </div>
+              <div class="font-label-sm text-label-sm text-primary font-bold">MOAT 05</div>
+              <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Rapid Product Experimentation</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                We launch test SKUs live in specific pincodes, monitor reorder curves in real time, and scale winning
+                recipes nationwide while discarding low-velocity variants within weeks.
+              </p>
+              <div class="pt-2 flex flex-wrap gap-3">
+                <span class="px-3 py-1 rounded-lg bg-surface font-label-sm text-label-sm text-on-surface">Real-Time
+                  Search Analytics</span>
+                <span class="px-3 py-1 rounded-lg bg-surface font-label-sm text-label-sm text-on-surface">A/B Price
+                  Testing</span>
+                <span class="px-3 py-1 rounded-lg bg-surface font-label-sm text-label-sm text-on-surface">Direct
+                  Consumer Feedback Loops</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION 9: POWERED BY PROPELPAD (INFRASTRUCTURE BACKBONE) -->
+      <section class="w-full py-16 lg:py-24 bg-surface-container-lowest">
+        <div class="max-w-[1360px] mx-auto px-6 lg:px-12">
+          <div class="rounded-3xl bg-surface-container p-8 lg:p-14 relative overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+              <div class="lg:col-span-7 flex flex-col gap-6">
+                <div
+                  class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-bold shadow-sm max-w-max">
+                  <span class="material-symbols-outlined text-[18px] text-primary">lan</span>
+                  <span class="">VENTURE INFRASTRUCTURE ARCHITECTURE</span>
+                </div>
+                <h2 class="font-headline-xl text-headline-xl font-extrabold text-on-surface leading-tight">
+                  Powered by PropelPad Distributed Commerce Infrastructure
+                </h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                  TEN Foods operates atop PropelPad's shared network of distributed micro-fulfillment nodes, cloud pods,
+                  and technology-enabled logistics rails. This structural partnership gives TEN Foods unmatched
+                  operational leverage:
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                  <div class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-primary text-[22px] shrink-0">pin_drop</span>
+                    <div>
+                      <h4 class="font-title-md text-title-md font-bold text-on-surface">Hyper-Local Micro-Nodes</h4>
+                      <p class="font-body-sm text-body-sm text-on-surface-variant">Fulfillment points located within 2–3
+                        km of high-density consumer populations.</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-primary text-[22px] shrink-0">savings</span>
+                    <div>
+                      <h4 class="font-title-md text-title-md font-bold text-on-surface">Drastically Lower Capex</h4>
+                      <p class="font-body-sm text-body-sm text-on-surface-variant">Shared equipment and footprint
+                        reduces fixed cost overhead per brand.</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-primary text-[22px] shrink-0">electric_meter</span>
+                    <div>
+                      <h4 class="font-title-md text-title-md font-bold text-on-surface">Sub-15 Min Readiness</h4>
+                      <p class="font-body-sm text-body-sm text-on-surface-variant">Standardized order routing enables
+                        instant dispatch to rider fleets.</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-primary text-[22px] shrink-0">recycling</span>
+                    <div>
+                      <h4 class="font-title-md text-title-md font-bold text-on-surface">Zero-Waste Operations</h4>
+                      <p class="font-body-sm text-body-sm text-on-surface-variant">Algorithmic demand pooling limits
+                        inventory obsolescence and food loss.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="lg:col-span-5 flex flex-col gap-4">
+                <div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-4">
+                  <div class="flex items-center justify-between">
+                    <span class="font-label-md text-label-md font-bold text-on-surface">Distributed Node Topology</span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-primary animate-ping"></span>
+                  </div>
+                  <!-- Mini SVG Topology Chart -->
+                  <div class="h-44 w-full flex items-center justify-center">
+                    <svg class="w-full h-full text-primary" fill="none" stroke="currentColor" viewBox="0 0 300 160">
+                      <circle class="fill-secondary-container stroke-primary" cx="150" cy="80" r="30" stroke-width="2">
+                      </circle>
+                      <text class="font-bold text-[11px] fill-current stroke-none" text-anchor="middle" x="150"
+                        y="84">PropelPad</text>
+                      <!-- Satellites -->
+                      <circle class="fill-surface-container-high stroke-outline" cx="40" cy="40" r="18"
+                        stroke-width="1.5"></circle>
+                      <text class="text-[9px] fill-on-surface stroke-none font-semibold" text-anchor="middle" x="40"
+                        y="44">Pod A</text>
+                      <circle class="fill-surface-container-high stroke-outline" cx="260" cy="40" r="18"
+                        stroke-width="1.5"></circle>
+                      <text class="text-[9px] fill-on-surface stroke-none font-semibold" text-anchor="middle" x="260"
+                        y="44">Pod B</text>
+                      <circle class="fill-surface-container-high stroke-outline" cx="50" cy="120" r="18"
+                        stroke-width="1.5"></circle>
+                      <text class="text-[9px] fill-on-surface stroke-none font-semibold" text-anchor="middle" x="50"
+                        y="124">Pod C</text>
+                      <circle class="fill-surface-container-high stroke-outline" cx="250" cy="120" r="18"
+                        stroke-width="1.5"></circle>
+                      <text class="text-[9px] fill-on-surface stroke-none font-semibold" text-anchor="middle" x="250"
+                        y="124">Pod D</text>
+                      <!-- Connection lines -->
+                      <line stroke-dasharray="3 3" stroke-width="1.5" x1="125" x2="55" y1="65" y2="45"></line>
+                      <line stroke-dasharray="3 3" stroke-width="1.5" x1="175" x2="245" y1="65" y2="45"></line>
+                      <line stroke-dasharray="3 3" stroke-width="1.5" x1="125" x2="65" y1="95" y2="115"></line>
+                      <line stroke-dasharray="3 3" stroke-width="1.5" x1="175" x2="235" y1="95" y2="115"></line>
+                    </svg>
+                  </div>
+                  <div
+                    class="p-3 rounded-xl bg-surface-container-low text-center font-body-sm text-body-sm text-on-surface-variant">
+                    Every node acts as a unified hub for food trading, cloud kitchen assembly, and packaged drop-off.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION 10: PARTNER WITH US & COLLABORATION PORTAL -->
+      <section class="w-full py-16 lg:py-24 bg-surface" id="partner-form">
+        <div class="max-w-[1360px] mx-auto px-6 lg:px-12">
+          <div class="rounded-3xl bg-surface-container-lowest p-8 lg:p-14 shadow-md">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+              <div class="lg:col-span-5 flex flex-col gap-6">
+                <div
+                  class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm font-bold max-w-max">
+                  <span class="material-symbols-outlined text-[16px]">handshake</span>
+                  <span class="">CO-CREATION &amp; ALLIANCE</span>
+                </div>
+                <h2 class="font-headline-xl text-headline-xl font-extrabold text-on-surface leading-tight">
+                  Let's Build the Next Food Brand Together
+                </h2>
+                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                  Whether you are an agricultural producer, contract food manufacturer, cloud kitchen operator, or
+                  emerging FMCG founder seeking quick commerce scale — TEN Foods provides the digital rails and demand
+                  distribution.
+                </p>
+                <div class="flex flex-col gap-3 pt-2">
+                  <div class="flex items-center gap-3 text-on-surface">
+                    <span class="material-symbols-outlined text-primary text-[20px]">check</span>
+                    <span class="font-body-sm text-body-sm">Guaranteed volume off-take for farm producers</span>
+                  </div>
+                  <div class="flex items-center gap-3 text-on-surface">
+                    <span class="material-symbols-outlined text-primary text-[20px]">check</span>
+                    <span class="font-body-sm text-body-sm">Turnkey brand licensing for kitchen operators</span>
+                  </div>
+                  <div class="flex items-center gap-3 text-on-surface">
+                    <span class="material-symbols-outlined text-primary text-[20px]">check</span>
+                    <span class="font-body-sm text-body-sm">Direct dark-store placement across Blinkit, Zepto, &amp;
+                      Instamart</span>
+                  </div>
+                </div>
+                <div class="p-4 rounded-2xl bg-surface-container-low flex items-center gap-4 mt-4">
+                  <div>
+                    <div class="font-label-md text-label-md font-bold text-on-surface">Corporate Partnerships Desk</div>
+                    <div class="font-body-sm text-body-sm text-on-surface-variant">partners@tenfoods.in</div>
+                  </div>
+                </div>
+              </div>
+              <!-- Interactive Inquiry Form -->
+              <div class="lg:col-span-7">
+                <form class="flex flex-col gap-5 p-6 lg:p-8 rounded-2xl bg-surface-container-low shadow-sm"
+                  id="ten-partner-form">
+                  <div class="flex flex-col gap-1 pb-1 border-b border-outline-variant/30">
+                    <h3 class="text-[18px] font-bold text-on-surface tracking-tight">Submit Collaboration Inquiry</h3>
+                    <p class="text-body-sm text-on-surface-variant">Connect with our venture development and supply
+                      chain partnership team.</p>
+                  </div>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                    <div class="flex flex-col gap-1"><label
+                        class="font-label-sm text-[11px] font-semibold text-on-surface-variant uppercase tracking-wider"
+                        for="partner-name">Full Name <span class="text-primary">*</span></label><input
+                        class="w-full min-h-[44px] px-3.5 py-2.5 rounded-xl bg-surface-container-lowest border border-outline-variant/30 text-on-surface placeholder:text-outline text-body-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary shadow-xs transition-all duration-150"
+                        id="partner-name" placeholder="e.g., Rajesh Sharma" required="" type="text"></div>
+                    <div class="flex flex-col gap-1"><label
+                        class="font-label-sm text-[11px] font-semibold text-on-surface-variant uppercase tracking-wider"
+                        for="partner-email">Business Email <span class="text-primary">*</span></label><input
+                        class="w-full min-h-[44px] px-3.5 py-2.5 rounded-xl bg-surface-container-lowest border border-outline-variant/30 text-on-surface placeholder:text-outline text-body-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary shadow-xs transition-all duration-150"
+                        id="partner-email" placeholder="name@company.com" required="" type="email"></div>
+                  </div>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                    <div class="flex flex-col gap-1"><label
+                        class="font-label-sm text-[11px] font-semibold text-on-surface-variant uppercase tracking-wider"
+                        for="partner-type">I Am A... <span class="text-primary">*</span></label><select
+                        class="w-full min-h-[44px] px-3.5 py-2.5 rounded-xl bg-surface-container-lowest border border-outline-variant/30 text-on-surface text-body-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary shadow-xs transition-all duration-150 cursor-pointer"
+                        id="partner-type" required="">
+                        <option disabled="" selected="" value="">Select Organization Type</option>
+                        <option value="farmer">Farmer / Agricultural Producer</option>
+                        <option value="manufacturer">Food &amp; Beverage Manufacturer</option>
+                        <option value="kitchen">Cloud Kitchen / QSR Operator</option>
+                        <option value="distributor">Digital FMCG / Distribution Partner</option>
+                        <option value="investor">Institutional Investor / PropelPad Partner</option>
+                      </select></div>
+                    <div class="flex flex-col gap-1"><label
+                        class="font-label-sm text-[11px] font-semibold text-on-surface-variant uppercase tracking-wider"
+                        for="partner-vertical">Vertical of Interest <span class="text-primary">*</span></label><select
+                        class="w-full min-h-[44px] px-3.5 py-2.5 rounded-xl bg-surface-container-lowest border border-outline-variant/30 text-on-surface text-body-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary shadow-xs transition-all duration-150 cursor-pointer"
+                        id="partner-vertical" required="">
+                        <option disabled="" selected="" value="">Select Business Vertical</option>
+                        <option value="trading">01 Product Trading &amp; Produce</option>
+                        <option value="quick-food">02 Quick Food Brands (Try Eat Now)</option>
+                        <option value="packaged-fmcg">03 Packaged Consumer Food (CPG)</option>
+                        <option value="omnichannel">Omnichannel Tech &amp; Supply Chain</option>
+                      </select></div>
+                  </div>
+                  <div class="flex flex-col gap-1"><label
+                      class="font-label-sm text-[11px] font-semibold text-on-surface-variant uppercase tracking-wider"
+                      for="partner-message">Brief Details &amp; Proposed Synergy</label><textarea
+                      class="w-full min-h-[88px] px-3.5 py-2.5 rounded-xl bg-surface-container-lowest border border-outline-variant/30 text-on-surface placeholder:text-outline text-body-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary shadow-xs transition-all duration-150 resize-none"
+                      id="partner-message"
+                      placeholder="Tell us about your product range, current distribution footprint, or kitchen capacity..."
+                      rows="3"></textarea></div>
+                  <div class="pt-1 flex items-center justify-between gap-4"><button
+                      class="w-full sm:w-auto inline-flex items-center justify-center min-h-[44px] gap-2 px-6 py-3 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-sm text-[12px] font-bold tracking-wider uppercase transition-all duration-150 shadow-[0_4px_14px_rgba(0,106,52,0.25)] hover:shadow-md active:scale-95 cursor-pointer select-none"
+                      id="submit-btn" type="submit"><span class="">Send Partnership Proposal</span><span
+                        class="material-symbols-outlined text-[16px]">send</span></button><span
+                      class="hidden sm:inline-block text-[11px] text-on-surface-variant font-label-sm">Response within
+                      24 hours</span></div>
+                  <div
+                    class="hidden p-3 rounded-xl bg-[#ECFDF5] border border-[#065F46]/20 text-[#065F46] font-body-sm text-body-sm flex items-center gap-2"
+                    id="form-success-banner"><span
+                      class="material-symbols-outlined text-[18px]">check_circle</span><span class="text-[12px]">Thank
+                      you! Your partnership brief has been received. A TEN Foods venture specialist will connect within
+                      24 business hours.</span></div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Interactive script for Menu Tabs and Form UX -->
+      <script>
+        (function () {
+          // Menu Tab Filtering Logic
+          const tabButtons = document.querySelectorAll('.menu-tab-btn');
+          const menuCards = document.querySelectorAll('.menu-card');
+
+          tabButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+              // Update button styles
+              tabButtons.forEach(b => {
+                b.classList.remove('bg-on-surface', 'text-surface-container-lowest');
+                b.classList.add('bg-surface-container', 'text-on-surface');
+              });
+              btn.classList.remove('bg-surface-container', 'text-on-surface');
+              btn.classList.add('bg-on-surface', 'text-surface-container-lowest');
+
+              const target = btn.getAttribute('data-target');
+
+              menuCards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                if (target === 'all' || category === target) {
+                  card.style.display = 'flex';
+                } else {
+                  card.style.display = 'none';
+                }
+              });
+            });
+          });
+
+          // Partnership Form submission micro-interaction
+          const partnerForm = document.getElementById('ten-partner-form');
+          const successBanner = document.getElementById('form-success-banner');
+          const submitBtn = document.getElementById('submit-btn');
+
+          if (partnerForm) {
+            partnerForm.addEventListener('submit', (e) => {
+              e.preventDefault();
+              submitBtn.disabled = true;
+              submitBtn.innerHTML = '<span class="material-symbols-outlined animate-spin text-[20px]">progress_activity</span> Submitting...';
+
+              setTimeout(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'Proposal Sent ✓';
+                submitBtn.classList.remove('bg-primary');
+                submitBtn.classList.add('bg-secondary');
+                successBanner.classList.remove('hidden');
+                partnerForm.reset();
+              }, 800);
+            });
+          }
+        })();
+      </script>
+    </div>
+  </main>
+  <footer class="w-full bg-surface-container-low mt-auto pt-space-3xl pb-space-xl">
+    <div class="max-w-[1360px] mx-auto px-6 lg:px-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-space-2xl">
+        <div class="lg:col-span-2 flex flex-col gap-4">
+          <div class="flex items-center gap-3">
+            <div class="flex items-center justify-center shrink-0"><img alt="Try Eat Now"
+                class="h-16 w-16 md:h-20 md:w-20 object-contain rounded-full"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcZETa4x3tWryWJ6Y1gesntkJl9xBVQO7fWSph5So6Jk8xusTSPOrSvMHNnI6BLE9vwjMmlQ_VXkF0EQze0m7ywXq4ulkWK03yRmbHTdYy15GRZFzcNcjWGSICedU1lZ6KX29KXPJQER_5ksNHzJ8UHw6S5WIaz_i6xZ6qvDC5A9kuQC7gtisO1k2aTwIM_4pzUtvx60bJUo5WedqNLzBuyiKM5IzCpAzPDhj7vkSHIgxWvSNbnt2T8lczpEF1MeDiMV4">
+            </div>
+            <div class="flex flex-col"><span class="font-headline-sm text-title-md tracking-tight text-on-surface">TEN
+                Foods</span><span class="font-label-sm text-label-sm text-on-surface-variant">TEN Foods Enterprises
+                Private Limited</span></div>
+          </div>
+          <p class="font-headline-sm text-headline-sm text-on-surface max-w-sm pt-2">Building food businesses for the
+            way India shops and eats today.</p>
+          <p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">A digital-first FMCG house and food
+            commerce platform architected for speed, culinary excellence, and hyper-local scale across high-velocity
+            demand channels.</p>
+          <div class="pt-2 flex flex-col gap-2"><span
+              class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Venture Architecture
+              &amp; Backing</span>
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-highest max-w-max">
+              <span class="material-symbols-outlined text-[18px] text-primary">hub</span><span
+                class="font-label-md text-label-md text-on-surface">Powered by PropelPad Distributed
+                Infrastructure</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3">
+          <h3 class="font-title-md text-title-md text-on-surface mb-1">Corporate &amp; About</h3>
+          <ul class="flex flex-col gap-2.5"><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
+              data-path="about-us" href="#">Our Mission &amp; Vision</a><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
+              data-path="our-ecosystem" href="#">Brand Architecture</a><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
+              data-path="why-ten" href="#">The TEN Methodology</a><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
+              data-path="why-ten" href="#">PropelPad Partnership</a><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
+              data-path="leadership-team" href="#">Leadership &amp; Governance</a></ul>
+        </div>
+        <div class="flex flex-col gap-3">
+          <h3 class="font-title-md text-title-md text-on-surface mb-1">Business Verticals</h3>
+          <ul class="flex flex-col gap-2.5"><a
+              class="flex items-center justify-between group font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
+              data-path="business-verticals" href="#verticals"><span
+                class="group-hover:text-primary transition-colors">01 Product Trading</span><span
+                class="px-2 py-0.5 rounded-full bg-[#ECFDF5] text-[#065F46] text-[10px] font-bold tracking-wider">LIVE</span></a><a
+              class="flex items-center justify-between gap-3 group font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors w-full"
+              data-path="business-verticals" href="#verticals"><span
+                class="group-hover:text-primary transition-colors">02 Quick Food &amp; Beverages</span><span
+                class="px-2.5 py-0.5 rounded-full bg-[#FFFBEB] text-[#92400E] text-[10px] font-bold tracking-wider uppercase inline-flex items-center justify-center shrink-0">GOING
+                LIVE</span></a><a
+              class="flex items-center justify-between group font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
+              data-path="business-verticals" href="#verticals"><span
+                class="group-hover:text-primary transition-colors">03 Packaged Consumer Goods</span><span
+                class="px-2 py-0.5 rounded-full bg-[#F1F5F9] text-[#475569] text-[10px] font-bold tracking-wider">SOON</span></a>
+            <div class="my-1 border-t border-outline-variant/30"></div><span
+              class="font-label-sm text-[11px] text-on-surface-variant/70 uppercase font-bold tracking-wider pt-1">Distribution
+              Channels</span><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
+              data-path="omnichannel-network" href="#verticals">Quick Commerce (15-30m)</a><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
+              data-path="omnichannel-network" href="#verticals">Food Aggregators &amp; Cloud QSR</a><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
+              data-path="omnichannel-network" href="#verticals">Direct-To-Consumer (D2C)</a>
+          </ul>
+        </div>
+        <div class="flex flex-col gap-3">
+          <h3 class="font-title-md text-title-md text-on-surface mb-1">Partners &amp; Connect</h3>
+          <ul class="flex flex-col gap-2.5"><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
+              data-path="partner-with-us" href="#">Brand Collaboration</a><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
+              data-path="partner-with-us" href="#">Sourcing &amp; Farm Producers</a><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
+              data-path="partner-with-us" href="#">Cloud Kitchen Operators</a><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
+              data-path="careers" href="#">Careers &amp; Culture</a><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
+              data-path="inquiries" href="#">Investor Relations</a><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
+              data-path="inquiries" href="#">Corporate Inquiries</a></ul>
+        </div>
+      </div>
+      <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="font-body-sm text-body-sm text-on-surface-variant">© 2025 TEN Foods Enterprises Private Limited. All
+          rights reserved. Try Eat Now™ is a proprietary FMCG trademark.</p>
+        <div class="flex items-center gap-6"><a
+            class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+            data-path="privacy-policy" href="#">Privacy Policy</a><a
+            class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+            data-path="terms-of-service" href="#">Terms of Service</a><a
+            class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+            data-path="compliance" href="#">Food Safety &amp; Compliance (FSSAI)</a></div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+</body>
+
+</html>
