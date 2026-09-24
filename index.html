@@ -37,7 +37,12 @@
       }
     }
 
-    ::-webkit-scrollbar {
+    /* Hide scrollbars utility */
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .no-scrollbar::-webkit-scrollbar {
       display: none;
     }
   </style>
@@ -640,8 +645,8 @@
           <!-- 6 Steps Grid -->
           <div class="flex flex-col gap-6">
             <div class="relative group/carousel">
-              <div class="flex overflow-x-auto snap-x snap-mandatory gap-5 pb-6 px-1 md:px-2 scroll-smooth select-none"
-                id="operating-engine-slider" style="scrollbar-width: none; -ms-overflow-style: none;">
+              <div class="flex overflow-x-auto gap-5 pb-6 px-1 md:px-2 scroll-smooth no-scrollbar"
+                id="operating-engine-slider">
                 <div
                   class="engine-card snap-center shrink-0 w-[280px] sm:w-[320px] md:w-[340px] p-6 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm hover:shadow-md transition-all flex flex-col gap-4 relative overflow-hidden group"
                   data-index="0">
@@ -740,26 +745,6 @@
                 id="engine-slide-prev" type="button">
                 <span class="material-symbols-outlined text-[20px]">chevron_left</span>
               </button>
-              <div class="flex items-center gap-2" id="engine-dots-track">
-                <button aria-label="Step 1"
-                  class="engine-dot h-2.5 rounded-full transition-all duration-300 w-8 bg-primary cursor-pointer"
-                  data-index="0" type="button"></button>
-                <button aria-label="Step 2"
-                  class="engine-dot h-2.5 rounded-full transition-all duration-300 w-2.5 bg-outline-variant/50 hover:bg-outline cursor-pointer"
-                  data-index="1" type="button"></button>
-                <button aria-label="Step 3"
-                  class="engine-dot h-2.5 rounded-full transition-all duration-300 w-2.5 bg-outline-variant/50 hover:bg-outline cursor-pointer"
-                  data-index="2" type="button"></button>
-                <button aria-label="Step 4"
-                  class="engine-dot h-2.5 rounded-full transition-all duration-300 w-2.5 bg-outline-variant/50 hover:bg-outline cursor-pointer"
-                  data-index="3" type="button"></button>
-                <button aria-label="Step 5"
-                  class="engine-dot h-2.5 rounded-full transition-all duration-300 w-2.5 bg-outline-variant/50 hover:bg-outline cursor-pointer"
-                  data-index="4" type="button"></button>
-                <button aria-label="Step 6"
-                  class="engine-dot h-2.5 rounded-full transition-all duration-300 w-2.5 bg-outline-variant/50 hover:bg-outline cursor-pointer"
-                  data-index="5" type="button"></button>
-              </div>
               <button aria-label="Next step"
                 class="w-11 h-11 min-h-[44px] min-w-[44px] rounded-full bg-surface-container-lowest hover:bg-surface-container border border-outline-variant/30 flex items-center justify-center text-on-surface shadow-xs hover:shadow-md transition-all duration-150 active:scale-95 cursor-pointer select-none"
                 id="engine-slide-next" type="button">
@@ -769,74 +754,78 @@
           </div>
         </div>
         <script>
-            (function setupEngineCarousel() {
-              const slider = document.getElementById('operating-engine-slider');
-              const prevBtn = document.getElementById('engine-slide-prev');
-              const nextBtn = document.getElementById('engine-slide-next');
-              const dots = document.querySelectorAll('.engine-dot');
-              const cards = document.querySelectorAll('.engine-card');
-              if (!slider || !prevBtn || !nextBtn) return;
+          (function setupEngineCarousel() {
+            const slider = document.getElementById('operating-engine-slider');
+            const prevBtn = document.getElementById('engine-slide-prev');
+            const nextBtn = document.getElementById('engine-slide-next');
+            const dots = document.querySelectorAll('.engine-dot');
+            const cards = document.querySelectorAll('.engine-card');
+            if (!slider || !cards.length) return;
 
-              function getStepWidth() {
-                const firstCard = cards[0];
-                if (firstCard) {
-                  const style = window.getComputedStyle(slider);
-                  const gap = parseFloat(style.gap) || 20;
-                  return firstCard.offsetWidth + gap;
+            function getStepWidth() {
+              const firstCard = cards[0];
+              if (firstCard) {
+                const style = window.getComputedStyle(slider);
+                const gap = parseFloat(style.gap) || 20;
+                return firstCard.offsetWidth + gap;
+              }
+              return 340;
+            }
+
+            function updateActiveDot(index) {
+              dots.forEach((dot, idx) => {
+                if (idx === index) {
+                  dot.classList.remove('w-2.5', 'bg-outline-variant/50', 'hover:bg-outline');
+                  dot.classList.add('w-8', 'bg-primary');
+                } else {
+                  dot.classList.remove('w-8', 'bg-primary');
+                  dot.classList.add('w-2.5', 'bg-outline-variant/50', 'hover:bg-outline');
                 }
-                return 340;
-              }
+              });
+            }
 
-              function updateActiveDot(index) {
-                dots.forEach((dot, idx) => {
-                  if (idx === index) {
-                    dot.classList.remove('w-2.5', 'bg-outline-variant/50', 'hover:bg-outline');
-                    dot.classList.add('w-8', 'bg-primary');
-                  } else {
-                    dot.classList.remove('w-8', 'bg-primary');
-                    dot.classList.add('w-2.5', 'bg-outline-variant/50', 'hover:bg-outline');
-                  }
-                });
-              }
-
+            if (prevBtn) {
               prevBtn.addEventListener('click', () => {
                 slider.scrollBy({ left: -getStepWidth(), behavior: 'smooth' });
               });
+            }
 
+            if (nextBtn) {
               nextBtn.addEventListener('click', () => {
                 slider.scrollBy({ left: getStepWidth(), behavior: 'smooth' });
               });
+            }
 
-              dots.forEach(dot => {
-                dot.addEventListener('click', () => {
-                  const index = parseInt(dot.getAttribute('data-index') || '0', 10);
-                  if (cards[index]) {
-                    const cardLeft = cards[index].offsetLeft - slider.offsetLeft;
-                    slider.scrollTo({ left: cardLeft, behavior: 'smooth' });
-                    updateActiveDot(index);
+            dots.forEach(dot => {
+              dot.addEventListener('click', () => {
+                const index = parseInt(dot.getAttribute('data-index') || '0', 10);
+                if (cards[index]) {
+                  const cardLeft = cards[index].offsetLeft - slider.offsetLeft;
+                  slider.scrollTo({ left: cardLeft, behavior: 'smooth' });
+                  updateActiveDot(index);
+                }
+              });
+            });
+
+            let scrollTimeout;
+            slider.addEventListener('scroll', () => {
+              clearTimeout(scrollTimeout);
+              scrollTimeout = setTimeout(() => {
+                const scrollCenter = slider.scrollLeft + (slider.clientWidth / 2);
+                let closestIdx = 0;
+                let minDiff = Infinity;
+                cards.forEach((card, idx) => {
+                  const cardCenter = card.offsetLeft - slider.offsetLeft + (card.offsetWidth / 2);
+                  const diff = Math.abs(scrollCenter - cardCenter);
+                  if (diff < minDiff) {
+                    minDiff = diff;
+                    closestIdx = idx;
                   }
                 });
-              });
-
-              let scrollTimeout;
-              slider.addEventListener('scroll', () => {
-                clearTimeout(scrollTimeout);
-                scrollTimeout = setTimeout(() => {
-                  const scrollCenter = slider.scrollLeft + (slider.clientWidth / 2);
-                  let closestIdx = 0;
-                  let minDiff = Infinity;
-                  cards.forEach((card, idx) => {
-                    const cardCenter = card.offsetLeft - slider.offsetLeft + (card.offsetWidth / 2);
-                    const diff = Math.abs(scrollCenter - cardCenter);
-                    if (diff < minDiff) {
-                      minDiff = diff;
-                      closestIdx = idx;
-                    }
-                  });
-                  updateActiveDot(closestIdx);
-                }, 60);
-              }, { passive: true });
-            })();
+                updateActiveDot(closestIdx);
+              }, 60);
+            }, { passive: true });
+          })();
         </script>
       </section>
       <!-- SECTION 4: OMNICHANNEL DISTRIBUTION ECOSYSTEM -->
@@ -1011,9 +1000,11 @@
             <div class="lg:col-span-6 grid grid-cols-2 gap-4">
               <div class="rounded-2xl overflow-hidden h-64 bg-surface-container">
                 <img class="w-full h-full object-cover"
+                  alt="Golden sunlit fresh onions piled high in wooden harvest crates"
                   data-alt="Golden sunlit fresh onions piled high in wooden harvest crates in an Indian agricultural marketplace, clean natural sunlight, sharp focus, rich earthy colors."
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo_EBYI-QgwOHP_9CDOb0N_IEMd5EciWmpiych5eOLE6rePcOjVLJZSROkvpuEVuvaAeic9O8Qx9sm35ZeeeHhlkXRHBPSbRk0BgWozk_HHEu-PQJH9N735rHdozugVEg3G3JqcExF-1VMETb-3FjBFMlu7-CNDHbkVACk_iYVAH3o7jdYHqEs2sl7up71JDhALYFBcFmZvy7c4r9K-n8FL7nvS1yQoA4GUGyW1BGuXvPToNwZGdl0BA">
+                  src="oinon Picture.jpg">
               </div>
+              <!-- https://lh3.googleusercontent.com/aida-public/AB6AXuBo_EBYI-QgwOHP_9CDOb0N_IEMd5EciWmpiych5eOLE6rePcOjVLJZSROkvpuEVuvaAeic9O8Qx9sm35ZeeeHhlkXRHBPSbRk0BgWozk_HHEu-PQJH9N735rHdozugVEg3G3JqcExF-1VMETb-3FjBFMlu7-CNDHbkVACk_iYVAH3o7jdYHqEs2sl7up71JDhALYFBcFmZvy7c4r9K-n8FL7nvS1yQoA4GUGyW1BGuXvPToNwZGdl0BA -->
               <div class="rounded-2xl overflow-hidden h-64 bg-surface-container mt-6">
                 <img class="w-full h-full object-cover"
                   data-alt="Modern logistics sorting line for fresh vegetables, automated sorting conveyors, workers in sanitary green aprons carefully grading farm goods, crisp industrial food production photography."
@@ -1032,76 +1023,7 @@
             </div>
           </div>
         </div>
-        <script>
-          (function setupEngineCarousel() {
-            const slider = document.getElementById('operating-engine-slider');
-            const prevBtn = document.getElementById('engine-slide-prev');
-            const nextBtn = document.getElementById('engine-slide-next');
-            const dots = document.querySelectorAll('.engine-dot');
-            const cards = document.querySelectorAll('.engine-card');
-            if (!slider || !prevBtn || !nextBtn) return;
 
-            function getStepWidth() {
-              const firstCard = cards[0];
-              if (firstCard) {
-                const style = window.getComputedStyle(slider);
-                const gap = parseFloat(style.gap) || 20;
-                return firstCard.offsetWidth + gap;
-              }
-              return 340;
-            }
-
-            function updateActiveDot(index) {
-              dots.forEach((dot, idx) => {
-                if (idx === index) {
-                  dot.classList.remove('w-2.5', 'bg-outline-variant/50', 'hover:bg-outline');
-                  dot.classList.add('w-8', 'bg-primary');
-                } else {
-                  dot.classList.remove('w-8', 'bg-primary');
-                  dot.classList.add('w-2.5', 'bg-outline-variant/50', 'hover:bg-outline');
-                }
-              });
-            }
-
-            prevBtn.addEventListener('click', () => {
-              slider.scrollBy({ left: -getStepWidth(), behavior: 'smooth' });
-            });
-
-            nextBtn.addEventListener('click', () => {
-              slider.scrollBy({ left: getStepWidth(), behavior: 'smooth' });
-            });
-
-            dots.forEach(dot => {
-              dot.addEventListener('click', () => {
-                const index = parseInt(dot.getAttribute('data-index') || '0', 10);
-                if (cards[index]) {
-                  const cardLeft = cards[index].offsetLeft - slider.offsetLeft;
-                  slider.scrollTo({ left: cardLeft, behavior: 'smooth' });
-                  updateActiveDot(index);
-                }
-              });
-            });
-
-            let scrollTimeout;
-            slider.addEventListener('scroll', () => {
-              clearTimeout(scrollTimeout);
-              scrollTimeout = setTimeout(() => {
-                const scrollCenter = slider.scrollLeft + (slider.clientWidth / 2);
-                let closestIdx = 0;
-                let minDiff = Infinity;
-                cards.forEach((card, idx) => {
-                  const cardCenter = card.offsetLeft - slider.offsetLeft + (card.offsetWidth / 2);
-                  const diff = Math.abs(scrollCenter - cardCenter);
-                  if (diff < minDiff) {
-                    minDiff = diff;
-                    closestIdx = idx;
-                  }
-                });
-                updateActiveDot(closestIdx);
-              }, 60);
-            }, { passive: true });
-          })();
-        </script>
       </section>
       <!-- SECTION 6: TRY EAT NOW CONSUMER FOOD SHOWCASE (VERTICAL 2 SPOTLIGHT) -->
       <section class="w-full py-16 lg:py-24 bg-surface">
@@ -1419,76 +1341,7 @@
             </div>
           </div>
         </div>
-        <script>
-          (function setupEngineCarousel() {
-            const slider = document.getElementById('operating-engine-slider');
-            const prevBtn = document.getElementById('engine-slide-prev');
-            const nextBtn = document.getElementById('engine-slide-next');
-            const dots = document.querySelectorAll('.engine-dot');
-            const cards = document.querySelectorAll('.engine-card');
-            if (!slider || !prevBtn || !nextBtn) return;
 
-            function getStepWidth() {
-              const firstCard = cards[0];
-              if (firstCard) {
-                const style = window.getComputedStyle(slider);
-                const gap = parseFloat(style.gap) || 20;
-                return firstCard.offsetWidth + gap;
-              }
-              return 340;
-            }
-
-            function updateActiveDot(index) {
-              dots.forEach((dot, idx) => {
-                if (idx === index) {
-                  dot.classList.remove('w-2.5', 'bg-outline-variant/50', 'hover:bg-outline');
-                  dot.classList.add('w-8', 'bg-primary');
-                } else {
-                  dot.classList.remove('w-8', 'bg-primary');
-                  dot.classList.add('w-2.5', 'bg-outline-variant/50', 'hover:bg-outline');
-                }
-              });
-            }
-
-            prevBtn.addEventListener('click', () => {
-              slider.scrollBy({ left: -getStepWidth(), behavior: 'smooth' });
-            });
-
-            nextBtn.addEventListener('click', () => {
-              slider.scrollBy({ left: getStepWidth(), behavior: 'smooth' });
-            });
-
-            dots.forEach(dot => {
-              dot.addEventListener('click', () => {
-                const index = parseInt(dot.getAttribute('data-index') || '0', 10);
-                if (cards[index]) {
-                  const cardLeft = cards[index].offsetLeft - slider.offsetLeft;
-                  slider.scrollTo({ left: cardLeft, behavior: 'smooth' });
-                  updateActiveDot(index);
-                }
-              });
-            });
-
-            let scrollTimeout;
-            slider.addEventListener('scroll', () => {
-              clearTimeout(scrollTimeout);
-              scrollTimeout = setTimeout(() => {
-                const scrollCenter = slider.scrollLeft + (slider.clientWidth / 2);
-                let closestIdx = 0;
-                let minDiff = Infinity;
-                cards.forEach((card, idx) => {
-                  const cardCenter = card.offsetLeft - slider.offsetLeft + (card.offsetWidth / 2);
-                  const diff = Math.abs(scrollCenter - cardCenter);
-                  if (diff < minDiff) {
-                    minDiff = diff;
-                    closestIdx = idx;
-                  }
-                });
-                updateActiveDot(closestIdx);
-              }, 60);
-            }, { passive: true });
-          })();
-        </script>
       </section>
       <!-- SECTION 8: WHY TEN FOODS (THE 5 STRATEGIC MOATS) -->
       <section class="w-full py-16 lg:py-24 bg-surface">
